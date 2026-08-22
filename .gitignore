@@ -1,0 +1,25 @@
+# Rust 构建产物
+/target
+/dist
+
+# llama.cpp 二进制（由下载脚本获取，体积大，不入库）
+/llama-cuda/
+
+# AI 模型文件（体积大，由 download_models.ps1 获取）
+/assets/models/
+
+# IDE / 编辑器
+/.idea/
+/.vscode/
+*.iml
+
+# WorkBuddy / 临时缓存
+/.workbuddy/
+/.npm-cache-tmp/
+
+
+# OS 生成物
+Thumbs.db
+.DS_Store
+
+

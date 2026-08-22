@@ -1,0 +1,27 @@
+[package]
+name = "xiangxu"
+version = "0.0.1"
+edition = "2024"
+description = "象胥 (Xiangxu)：实时屏幕翻译浮层。典出《周礼·秋官》——象胥，掌蛮夷戎狄之国使，传王之言而谕悦焉。"
+default-run = "xiangxu"
+
+[[bin]]
+name = "xiangxu"
+path = "src/main.rs"
+
+[dependencies]
+eframe = "0.34.3"
+egui = "0.34.3"
+image = { version = "0.25.9", features = [
+    "png", "jpeg", "gif", "bmp", "webp", "tiff",
+], default-features = false }
+xcap = "0.9.4"
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["fmt", "env-filter"] }
+arboard = "3.6.1"
+# 仅用于读取全局鼠标位置（贴边自动隐藏需要；已在依赖树中，无额外编译成本）
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"] }
+# 模型下载用轻量 HTTP 客户端。native-tls 在 Windows 走系统 schannel，
+# 不引入 rustls/ring 等重 TLS 依赖，保持可离线编译。
+ureq = { version = "3.4", default-features = false, features = ["native-tls"] }
