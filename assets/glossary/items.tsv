@@ -1,0 +1,1997 @@
+# 由 tools/fetch_glossary.py 从 PokeAPI 生成，勿手工编辑；补充请用 custom.tsv
+master-ball	大师球
+ultra-ball	高级球
+great-ball	超级球
+poke-ball	精灵球
+safari-ball	狩猎球
+net-ball	捕网球
+dive-ball	潜水球
+nest-ball	巢穴球
+repeat-ball	重复球
+timer-ball	计时球
+luxury-ball	豪华球
+premier-ball	纪念球
+dusk-ball	黑暗球
+heal-ball	治愈球
+quick-ball	先机球
+cherish-ball	贵重球
+potion	伤药
+antidote	解毒药
+burn-heal	灼伤药
+ice-heal	解冻药
+awakening	解眠药
+paralyze-heal	解麻药
+full-restore	全复药
+max-potion	全满药
+hyper-potion	厉害伤药
+super-potion	好伤药
+full-heal	万灵药
+revive	活力碎片
+max-revive	活力块
+fresh-water	美味之水
+soda-pop	劲爽汽水
+lemonade	果汁牛奶
+moomoo-milk	哞哞鲜奶
+energy-powder	元气粉
+energy-root	元气根
+heal-powder	万能粉
+revival-herb	复活草
+ether	ＰＰ单项小补剂
+max-ether	ＰＰ单项全补剂
+elixir	ＰＰ多项小补剂
+max-elixir	ＰＰ多项全补剂
+lava-cookie	釜炎仙贝
+berry-juice	树果汁
+sacred-ash	圣灰
+hp-up	ＨＰ增强剂
+protein	攻击增强剂
+iron	防御增强剂
+carbos	速度增强剂
+calcium	特攻增强剂
+rare-candy	神奇糖果
+pp-up	ＰＰ提升剂
+zinc	特防增强剂
+pp-max	ＰＰ极限提升剂
+old-gateau	森之羊羹
+guard-spec	能力防守
+dire-hit	要害攻击
+x-attack	力量强化
+x-defense	防御强化
+x-speed	速度强化
+x-accuracy	命中强化
+x-sp-atk	特攻强化
+x-sp-def	特防强化
+poke-doll	皮皮玩偶
+fluffy-tail	向尾喵的尾巴
+blue-flute	蓝色玻璃哨
+yellow-flute	黄色玻璃哨
+red-flute	红色玻璃哨
+black-flute	黑色玻璃哨
+white-flute	白色玻璃哨
+shoal-salt	浅滩海盐
+shoal-shell	浅滩贝壳
+red-shard	红色碎片
+blue-shard	蓝色碎片
+yellow-shard	黄色碎片
+green-shard	绿色碎片
+super-repel	白银喷雾
+max-repel	黄金喷雾
+escape-rope	离洞绳
+repel	除虫喷雾
+sun-stone	日之石
+moon-stone	月之石
+fire-stone	火之石
+thunder-stone	雷之石
+water-stone	水之石
+leaf-stone	叶之石
+tiny-mushroom	小蘑菇
+big-mushroom	大蘑菇
+pearl	珍珠
+big-pearl	大珍珠
+stardust	星星沙子
+star-piece	星星碎片
+nugget	金珠
+heart-scale	心之鳞片
+honey	甜甜蜜
+growth-mulch	速速肥
+damp-mulch	湿湿肥
+stable-mulch	久久肥
+gooey-mulch	粘粘肥
+root-fossil	根状化石
+claw-fossil	爪子化石
+helix-fossil	贝壳化石
+dome-fossil	甲壳化石
+old-amber	秘密琥珀
+armor-fossil	盾甲化石
+skull-fossil	头盖化石
+rare-bone	贵重骨头
+shiny-stone	光之石
+dusk-stone	暗之石
+dawn-stone	觉醒之石
+oval-stone	浑圆之石
+odd-keystone	楔石
+adamant-orb	金刚宝珠
+lustrous-orb	白玉宝珠
+cheri-berry	樱子果
+chesto-berry	零余果
+pecha-berry	桃桃果
+rawst-berry	莓莓果
+aspear-berry	利木果
+leppa-berry	苹野果
+oran-berry	橙橙果
+persim-berry	柿仔果
+lum-berry	木子果
+sitrus-berry	文柚果
+figy-berry	勿花果
+wiki-berry	异奇果
+mago-berry	芒芒果
+aguav-berry	乐芭果
+iapapa-berry	芭亚果
+razz-berry	蔓莓果
+bluk-berry	墨莓果
+nanab-berry	蕉香果
+wepear-berry	西梨果
+pinap-berry	凰梨果
+pomeg-berry	榴石果
+kelpsy-berry	藻根果
+qualot-berry	比巴果
+hondew-berry	哈密果
+grepa-berry	萄葡果
+tamato-berry	茄番果
+cornn-berry	玉黍果
+magost-berry	岳竹果
+rabuta-berry	茸丹果
+nomel-berry	檬柠果
+spelon-berry	刺角果
+pamtre-berry	椰木果
+watmel-berry	瓜西果
+durin-berry	金枕果
+belue-berry	靛莓果
+occa-berry	巧可果
+passho-berry	千香果
+wacan-berry	烛木果
+rindo-berry	罗子果
+yache-berry	番荔果
+chople-berry	莲蒲果
+kebia-berry	通通果
+shuca-berry	腰木果
+coba-berry	棱瓜果
+payapa-berry	福禄果
+tanga-berry	扁樱果
+charti-berry	草蚕果
+kasib-berry	佛柑果
+haban-berry	莓榴果
+colbur-berry	刺耳果
+babiri-berry	霹霹果
+chilan-berry	灯浆果
+liechi-berry	枝荔果
+ganlon-berry	龙睛果
+salac-berry	沙鳞果
+petaya-berry	龙火果
+apicot-berry	杏仔果
+lansat-berry	兰萨果
+starf-berry	星桃果
+enigma-berry	谜芝果
+micle-berry	奇秘果
+custap-berry	释陀果
+jaboca-berry	嘉珍果
+rowap-berry	雾莲果
+bright-powder	光粉
+white-herb	白色香草
+macho-brace	强制锻炼器
+exp-share	学习装置
+quick-claw	先制之爪
+soothe-bell	安抚之铃
+mental-herb	心灵香草
+choice-band	讲究头带
+kings-rock	王者之证
+silver-powder	银粉
+amulet-coin	护符金币
+cleanse-tag	洁净之符
+soul-dew	心之水滴
+deep-sea-tooth	深海之牙
+deep-sea-scale	深海鳞片
+smoke-ball	烟雾球
+everstone	不变之石
+focus-band	气势头带
+lucky-egg	幸运蛋
+scope-lens	焦点镜
+metal-coat	金属膜
+leftovers	吃剩的东西
+dragon-scale	龙之鳞片
+light-ball	电气球
+soft-sand	柔软沙子
+hard-stone	硬石头
+miracle-seed	奇迹种子
+black-glasses	黑色眼镜
+black-belt	黑带
+magnet	磁铁
+mystic-water	神秘水滴
+sharp-beak	锐利鸟嘴
+poison-barb	毒针
+never-melt-ice	不融冰
+spell-tag	诅咒之符
+twisted-spoon	弯曲的汤匙
+charcoal	木炭
+dragon-fang	龙之牙
+silk-scarf	丝绸围巾
+up-grade	升级数据
+shell-bell	贝壳之铃
+sea-incense	海潮薰香
+lax-incense	悠闲薰香
+lucky-punch	吉利拳
+metal-powder	金属粉
+thick-club	粗骨头
+stick	大葱
+red-scarf	红色头巾
+blue-scarf	蓝色头巾
+pink-scarf	粉红头巾
+green-scarf	绿色头巾
+yellow-scarf	黄色头巾
+wide-lens	广角镜
+muscle-band	力量头带
+wise-glasses	博识眼镜
+expert-belt	达人带
+light-clay	光之黏土
+life-orb	生命宝珠
+power-herb	强力香草
+toxic-orb	剧毒宝珠
+flame-orb	火焰宝珠
+quick-powder	速度粉
+focus-sash	气势披带
+zoom-lens	对焦镜
+metronome	节拍器
+iron-ball	黑色铁球
+lagging-tail	后攻之尾
+destiny-knot	红线
+black-sludge	黑色污泥
+icy-rock	冰冷岩石
+smooth-rock	沙沙岩石
+heat-rock	炽热岩石
+damp-rock	潮湿岩石
+grip-claw	紧缠钩爪
+choice-scarf	讲究围巾
+sticky-barb	附着针
+power-bracer	力量护腕
+power-belt	力量腰带
+power-lens	力量镜
+power-band	力量束带
+power-anklet	力量护踝
+power-weight	力量负重
+shed-shell	美丽空壳
+big-root	大根茎
+choice-specs	讲究眼镜
+flame-plate	火球石板
+splash-plate	水滴石板
+zap-plate	雷电石板
+meadow-plate	碧绿石板
+icicle-plate	冰柱石板
+fist-plate	拳头石板
+toxic-plate	剧毒石板
+earth-plate	大地石板
+sky-plate	蓝天石板
+mind-plate	神奇石板
+insect-plate	玉虫石板
+stone-plate	岩石石板
+spooky-plate	妖怪石板
+draco-plate	龙之石板
+dread-plate	恶颜石板
+iron-plate	钢铁石板
+odd-incense	奇异薰香
+rock-incense	岩石薰香
+full-incense	饱腹薰香
+wave-incense	涟漪薰香
+rose-incense	花朵薰香
+luck-incense	幸运薰香
+pure-incense	洁净薰香
+protector	护具
+electirizer	电力增幅器
+magmarizer	熔岩增幅器
+dubious-disc	可疑补丁
+reaper-cloth	灵界之布
+razor-claw	锐利之爪
+razor-fang	锐利之牙
+tm01	招式学习器０１
+tm02	招式学习器０２
+tm03	招式学习器０３
+tm04	招式学习器０４
+tm05	招式学习器０５
+tm06	招式学习器０６
+tm07	招式学习器０７
+tm08	招式学习器０８
+tm09	招式学习器０９
+tm10	招式学习器１０
+tm11	招式学习器１１
+tm12	招式学习器１２
+tm13	招式学习器１３
+tm14	招式学习器１４
+tm15	招式学习器１５
+tm16	招式学习器１６
+tm17	招式学习器１７
+tm18	招式学习器１８
+tm19	招式学习器１９
+tm20	招式学习器２０
+tm21	招式学习器２１
+tm22	招式学习器２２
+tm23	招式学习器２３
+tm24	招式学习器２４
+tm25	招式学习器２５
+tm26	招式学习器２６
+tm27	招式学习器２７
+tm28	招式学习器２８
+tm29	招式学习器２９
+tm30	招式学习器３０
+tm31	招式学习器３１
+tm32	招式学习器３２
+tm33	招式学习器３３
+tm34	招式学习器３４
+tm35	招式学习器３５
+tm36	招式学习器３６
+tm37	招式学习器３７
+tm38	招式学习器３８
+tm39	招式学习器３９
+tm40	招式学习器４０
+tm41	招式学习器４１
+tm42	招式学习器４２
+tm43	招式学习器４３
+tm44	招式学习器４４
+tm45	招式学习器４５
+tm46	招式学习器４６
+tm47	招式学习器４７
+tm48	招式学习器４８
+tm49	招式学习器４９
+tm50	招式学习器５０
+tm51	招式学习器５１
+tm52	招式学习器５２
+tm53	招式学习器５３
+tm54	招式学习器５４
+tm55	招式学习器５５
+tm56	招式学习器５６
+tm57	招式学习器５７
+tm58	招式学习器５８
+tm59	招式学习器５９
+tm60	招式学习器６０
+tm61	招式学习器６１
+tm62	招式学习器６２
+tm63	招式学习器６３
+tm64	招式学习器６４
+tm65	招式学习器６５
+tm66	招式学习器６６
+tm67	招式学习器６７
+tm68	招式学习器６８
+tm69	招式学习器６９
+tm70	招式学习器７０
+tm71	招式学习器７１
+tm72	招式学习器７２
+tm73	招式学习器７３
+tm74	招式学习器７４
+tm75	招式学习器７５
+tm76	招式学习器７６
+tm77	招式学习器７７
+tm78	招式学习器７８
+tm79	招式学习器７９
+tm80	招式学习器８０
+tm81	招式学习器８１
+tm82	招式学习器８２
+tm83	招式学习器８３
+tm84	招式学习器８４
+tm85	招式学习器８５
+tm86	招式学习器８６
+tm87	招式学习器８７
+tm88	招式学习器８８
+tm89	招式学习器８９
+tm90	招式学习器９０
+tm91	招式学习器９１
+tm92	招式学习器９２
+hm01	秘传学习器０１
+hm02	秘传学习器０２
+hm03	秘传学习器０３
+hm04	秘传学习器０４
+hm05	秘传学习器０５
+hm06	秘传学习器０６
+hm07	秘传学习器０７
+explorer-kit	探险套装
+loot-sack	宝物袋
+rule-book	规则书
+poke-radar	宝可追踪
+point-card	点数卡
+journal	冒险笔记
+seal-case	贴纸盒
+fashion-case	饰品盒
+seal-bag	贴纸袋
+pal-pad	朋友手册
+works-key	发电厂钥匙
+old-charm	古代护符
+galactic-key	银河队钥匙
+red-chain	红色锁链
+town-map	城镇地图
+vs-seeker	对战搜寻器
+coin-case	代币盒
+old-rod	破旧钓竿
+good-rod	好钓竿
+super-rod	厉害钓竿
+sprayduck	可达鸭喷壶
+poffin-case	宝芬盒
+suite-key	房间钥匙
+oaks-letter	大木的信
+lunar-wing	新月之羽
+member-card	会员卡
+azure-flute	天界之笛
+ss-ticket	船票
+contest-pass	华丽大赛参加证
+magma-stone	火山镇石
+parcel	包裹
+coupon-1	兑换券１
+coupon-2	兑换券２
+coupon-3	兑换券３
+storage-key	仓库钥匙
+secret-potion	秘传之药
+griseous-orb	白金宝珠
+vs-recorder	对战记录器
+gracidea	葛拉西蒂亚花
+secret-key	秘密钥匙
+apricorn-box	球果盒
+berry-pots	树果种植盆
+squirt-bottle	杰尼龟喷壶
+lure-ball	诱饵球
+level-ball	等级球
+moon-ball	月亮球
+heavy-ball	沉重球
+fast-ball	速度球
+friend-ball	友友球
+love-ball	甜蜜球
+park-ball	公园球
+sport-ball	竞赛球
+red-apricorn	红球果
+blue-apricorn	蓝球果
+yellow-apricorn	黄球果
+green-apricorn	绿球果
+pink-apricorn	粉球果
+white-apricorn	白球果
+black-apricorn	黑球果
+dowsing-machine	探宝器
+rage-candy-bar	愤怒馒头
+red-orb	朱红色宝珠
+blue-orb	靛蓝色宝珠
+jade-orb	草绿色宝珠
+enigma-stone	谜之水晶
+unown-report	未知图腾笔记
+blue-card	蓝卡
+slowpoke-tail	美味尾巴
+clear-bell	透明铃铛
+card-key	钥匙卡
+basement-key	地下钥匙
+red-scale	红色鳞片
+lost-item	遗失物
+pass	磁浮列车自由票
+machine-part	机械零件
+silver-wing	银色之羽
+rainbow-wing	虹色之羽
+mystery-egg	神奇蛋
+gb-sounds	ＧＢ播放器
+tidal-bell	海声铃铛
+data-card-01	数据卡０１
+data-card-02	数据卡０２
+data-card-03	数据卡０３
+data-card-04	数据卡０４
+data-card-05	数据卡０５
+data-card-06	数据卡０６
+data-card-07	数据卡０７
+data-card-08	数据卡０８
+data-card-09	数据卡０９
+data-card-10	数据卡１０
+data-card-11	数据卡１１
+data-card-12	数据卡１２
+data-card-13	数据卡１３
+data-card-14	数据卡１４
+data-card-15	数据卡１５
+data-card-16	数据卡１６
+data-card-17	数据卡１７
+data-card-18	数据卡１８
+data-card-19	数据卡１９
+data-card-20	数据卡２０
+data-card-21	数据卡２１
+data-card-22	数据卡２２
+data-card-23	数据卡２３
+data-card-24	数据卡２４
+data-card-25	数据卡２５
+data-card-26	数据卡２６
+data-card-27	数据卡２７
+lock-capsule	上锁的容器
+photo-album	相册
+mach-bike	音速自行车
+acro-bike	越野自行车
+wailmer-pail	吼吼鲸喷壶
+soot-sack	集灰袋
+letter	给大吾的信
+eon-ticket	无限船票
+scanner	探测器
+go-goggles	ＧＯＧＯ护目镜
+meteorite	陨石
+devon-scope	得文侦测镜
+poke-flute	宝可梦之笛
+gold-teeth	金假牙
+lift-key	电梯钥匙
+silph-scope	西尔佛检视镜
+tm-case	招式学习器盒
+tea	茶
+douse-drive	水流卡带
+shock-drive	闪电卡带
+burn-drive	火焰卡带
+chill-drive	冰冻卡带
+sweet-heart	心形甜点
+greet-mail	初次邮件
+favored-mail	喜爱邮件
+rsvp-mail	邀请邮件
+thanks-mail	感谢邮件
+inquiry-mail	询问邮件
+like-mail	推荐邮件
+reply-mail	回复邮件
+bridge-mail-s	桥梁邮件Ｓ
+bridge-mail-d	桥梁邮件Ｈ
+bridge-mail-t	桥梁邮件Ｃ
+bridge-mail-v	桥梁邮件Ｖ
+bridge-mail-m	桥梁邮件Ｗ
+prism-scale	美丽鳞片
+eviolite	进化奇石
+float-stone	轻石
+rocky-helmet	凸凸头盔
+air-balloon	气球
+red-card	红牌
+ring-target	标靶
+binding-band	紧绑束带
+absorb-bulb	球根
+cell-battery	充电电池
+eject-button	逃脱按键
+fire-gem	火之宝石
+water-gem	水之宝石
+electric-gem	电之宝石
+grass-gem	草之宝石
+ice-gem	冰之宝石
+fighting-gem	格斗宝石
+poison-gem	毒之宝石
+ground-gem	地面宝石
+flying-gem	飞行宝石
+psychic-gem	超能力宝石
+bug-gem	虫之宝石
+rock-gem	岩石宝石
+ghost-gem	幽灵宝石
+dark-gem	恶之宝石
+steel-gem	钢之宝石
+health-wing	体力之羽
+muscle-wing	肌力之羽
+resist-wing	抵抗之羽
+genius-wing	智力之羽
+clever-wing	精神之羽
+swift-wing	瞬发之羽
+pretty-wing	美丽之羽
+cover-fossil	背盖化石
+plume-fossil	羽毛化石
+liberty-pass	自由船票
+pass-orb	释出之玉
+dream-ball	梦境球
+poke-toy	宝可尾草
+prop-case	物品箱
+dragon-skull	龙之骨
+balm-mushroom	芳香蘑菇
+big-nugget	巨大金珠
+pearl-string	丸子珍珠
+comet-shard	彗星碎片
+relic-copper	古代铜币
+relic-silver	古代银币
+relic-gold	古代金币
+relic-vase	古代之壶
+relic-band	古代手镯
+relic-statue	古代石像
+relic-crown	古代王冠
+casteliacone	飞云冰淇淋
+dire-hit-2	要害攻击２
+x-speed-2	速度强化２
+x-sp-atk-2	特攻强化２
+x-sp-def-2	特防强化２
+x-defense-2	防御强化２
+x-attack-2	力量强化２
+x-accuracy-2	命中强化２
+x-speed-3	速度强化３
+x-sp-atk-3	特攻强化３
+x-sp-def-3	特防强化３
+x-defense-3	防御强化３
+x-attack-3	力量强化３
+x-accuracy-3	命中强化３
+x-speed-6	速度强化６
+x-sp-atk-6	特攻强化６
+x-sp-def-6	特防强化６
+x-defense-6	防御强化６
+x-attack-6	力量强化６
+x-accuracy-6	命中强化６
+ability-urge	？？？
+item-drop	？？？
+item-urge	？？？
+reset-urge	？？？
+dire-hit-3	要害攻击３
+light-stone	光明石
+dark-stone	黑暗石
+tm93	招式学习器９３
+tm94	招式学习器９４
+tm95	招式学习器９５
+xtransceiver	即时通讯器
+gram-1	配送物品１
+gram-2	配送物品２
+gram-3	配送物品３
+dragon-gem	龙之宝石
+normal-gem	一般宝石
+medal-box	奖牌盒
+dna-splicers	基因之楔
+permit	许可证
+oval-charm	圆形护符
+shiny-charm	闪耀护符
+plasma-card	等离子卡
+grubby-hanky	脏手帕
+colress-machine	阿克罗玛机器
+dropped-item	遗忘物
+reveal-glass	现形镜
+weakness-policy	弱点保险
+assault-vest	突击背心
+pixie-plate	妖精石板
+ability-capsule	特性胶囊
+whipped-dream	泡沫奶油
+sachet	香袋
+luminous-moss	光苔
+snowball	雪球
+safety-goggles	防尘护目镜
+rich-mulch	硕果肥
+surprise-mulch	吃惊肥
+boost-mulch	劲劲肥
+amaze-mulch	超效肥
+gengarite	耿鬼进化石
+gardevoirite	沙奈朵进化石
+ampharosite	电龙进化石
+venusaurite	妙蛙花进化石
+charizardite-x	喷火龙进化石Ｘ
+blastoisinite	水箭龟进化石
+mewtwonite-x	超梦进化石Ｘ
+mewtwonite-y	超梦进化石Ｙ
+blazikenite	火焰鸡进化石
+medichamite	恰雷姆进化石
+houndoominite	黑鲁加进化石
+aggronite	波士可多拉进化石
+banettite	诅咒娃娃进化石
+tyranitarite	班基拉斯进化石
+scizorite	巨钳螳螂进化石
+pinsirite	凯罗斯进化石
+aerodactylite	化石翼龙进化石
+lucarionite	路卡利欧进化石
+abomasite	暴雪王进化石
+kangaskhanite	袋兽进化石
+gyaradosite	暴鲤龙进化石
+absolite	阿勃梭鲁进化石
+charizardite-y	喷火龙进化石Ｙ
+alakazite	胡地进化石
+heracronite	赫拉克罗斯进化石
+mawilite	大嘴娃进化石
+manectite	雷电兽进化石
+garchompite	烈咬陆鲨进化石
+roseli-berry	洛玫果
+kee-berry	亚开果
+maranga-berry	香罗果
+discount-coupon	折价券
+strange-souvenir	神秘摆设
+lumiose-galette	密阿雷格雷派饼
+jaw-fossil	颚之化石
+sail-fossil	鳍之化石
+fairy-gem	妖精宝石
+adventure-rules	探险心得
+elevator-key	电梯钥匙
+holo-caster	全息影像通讯器
+honor-of-kalos	卡洛斯勋章
+intriguing-stone	似珍石
+lens-case	隐形眼镜盒
+looker-ticket	帅哥券
+mega-ring	超级环
+power-plant-pass	发电厂通行证
+profs-letter	博士的信
+roller-skates	轮滑鞋
+sprinklotad	莲叶童子喷壶
+tmv-pass	ＴＭＶ自由票
+tm96	招式学习器９６
+tm97	招式学习器９７
+tm98	招式学习器９８
+tm99	招式学习器９９
+tm100	招式学习器１００
+latiasite	拉帝亚斯进化石
+latiosite	拉帝欧斯进化石
+common-stone	常见石
+makeup-bag	化妆包
+travel-trunk	衣物箱
+shalour-sable	娑罗沙布蕾
+mega-charm	超级坠饰
+mega-glove	超级手套
+devon-parts	得文的物品
+pokeblock-kit	宝可方块套装
+key-to-room-1	１号客房的钥匙
+key-to-room-2	２号客房的钥匙
+key-to-room-4	４号客房的钥匙
+key-to-room-6	６号客房的钥匙
+devon-scuba-gear	得文潜水装备
+contest-costume--jacket	演出礼服
+magma-suit	熔岩装
+aqua-suit	海洋装
+pair-of-tickets	双人票
+mega-bracelet	超级手镯
+mega-pendant	超级吊坠
+mega-glasses	超级眼镜
+mega-anchor	超级船锚
+mega-stickpin	超级领针
+mega-tiara	超级头冠
+mega-anklet	超级脚镯
+swampertite	巨沼怪进化石
+sceptilite	蜥蜴王进化石
+sablenite	勾魂眼进化石
+altarianite	七夕青鸟进化石
+galladite	艾路雷朵进化石
+audinite	差不多娃娃进化石
+metagrossite	巨金怪进化石
+sharpedonite	巨牙鲨进化石
+slowbronite	呆壳兽进化石
+steelixite	大钢蛇进化石
+pidgeotite	大比鸟进化石
+glalitite	冰鬼护进化石
+diancite	蒂安希进化石
+prison-bottle	惩戒之壶
+mega-cuff	超级护腕
+cameruptite	喷火驼进化石
+lopunnite	长耳兔进化石
+salamencite	暴飞龙进化石
+beedrillite	大针蜂进化石
+key-stone	钥石
+meteorite-shard	陨石碎片
+eon-flute	无限之笛
+normalium-z--held	一般Ｚ
+firium-z--held	火Ｚ
+waterium-z--held	水Ｚ
+electrium-z--held	电Ｚ
+grassium-z--held	草Ｚ
+icium-z--held	冰Ｚ
+fightinium-z--held	格斗Ｚ
+poisonium-z--held	毒Ｚ
+groundium-z--held	地面Ｚ
+flyinium-z--held	飞行Ｚ
+psychium-z--held	超能力Ｚ
+buginium-z--held	虫Ｚ
+rockium-z--held	岩石Ｚ
+ghostium-z--held	幽灵Ｚ
+dragonium-z--held	龙Ｚ
+darkinium-z--held	恶Ｚ
+steelium-z--held	钢Ｚ
+fairium-z--held	妖精Ｚ
+pikanium-z--held	皮卡丘Ｚ
+bottle-cap	银色王冠
+gold-bottle-cap	金色王冠
+z-ring	Ｚ手环
+decidium-z--held	狙射树枭Ｚ
+incinium-z--held	炽焰咆哮虎Ｚ
+primarium-z--held	西狮海壬Ｚ
+tapunium-z--held	卡璞Ｚ
+marshadium-z--held	玛夏多Ｚ
+aloraichium-z--held	阿罗雷Ｚ
+snorlium-z--held	卡比兽Ｚ
+eevium-z--held	伊布Ｚ
+mewnium-z--held	梦幻Ｚ
+pikashunium-z--held	智皮卡Ｚ
+forage-bag	材料袋
+fishing-rod	钓竿
+professors-mask	博士的面罩
+festival-ticket	圆庆票
+sparkling-stone	光辉石
+adrenaline-orb	胆怯球
+zygarde-cube	基格尔德多面体
+ice-stone	冰之石
+ride-pager	骑行装置
+beast-ball	究极球
+big-malasada	大马拉萨达
+red-nectar	朱红色花蜜
+yellow-nectar	金黄色花蜜
+pink-nectar	桃粉色花蜜
+purple-nectar	兰紫色花蜜
+sun-flute	太阳之笛
+moon-flute	月亮之笛
+enigmatic-card	奇异卡片
+terrain-extender	大地膜
+protective-pads	部位护具
+electric-seed	电气种子
+psychic-seed	精神种子
+misty-seed	薄雾种子
+grassy-seed	青草种子
+fighting-memory	战斗存储碟
+flying-memory	飞翔存储碟
+poison-memory	毒存储碟
+ground-memory	大地存储碟
+rock-memory	岩石存储碟
+bug-memory	虫子存储碟
+ghost-memory	幽灵存储碟
+steel-memory	钢铁存储碟
+fire-memory	火焰存储碟
+water-memory	清水存储碟
+grass-memory	青草存储碟
+electric-memory	电子存储碟
+psychic-memory	精神存储碟
+ice-memory	冰雪存储碟
+dragon-memory	龙存储碟
+dark-memory	黑暗存储碟
+fairy-memory	妖精存储碟
+bike--green	自行车
+storage-key--galactic-warehouse	仓库钥匙
+basement-key--goldenrod	地下钥匙
+xtransceiver--red	即时通讯器
+xtransceiver--yellow	即时通讯器
+dna-splicers--merge	基因之楔
+dna-splicers--split	基因之楔
+dropped-item--red	遗忘物
+dropped-item--yellow	遗忘物
+holo-caster--green	全息影像通讯器
+bike--yellow	自行车
+holo-caster--red	全息影像通讯器
+basement-key--new-mauville	地下钥匙
+storage-key--sea-mauville	仓库钥匙
+ss-ticket--hoenn	船票
+contest-costume--dress	演出礼裙
+meteorite--2	陨石
+meteorite--3	陨石
+meteorite--4	陨石
+normalium-z--bag	一般Ｚ
+firium-z--bag	火Ｚ
+waterium-z--bag	水Ｚ
+electrium-z--bag	电Ｚ
+grassium-z--bag	草Ｚ
+icium-z--bag	冰Ｚ
+fightinium-z--bag	格斗Ｚ
+poisonium-z--bag	毒Ｚ
+groundium-z--bag	地面Ｚ
+flyinium-z--bag	飞行Ｚ
+psychium-z--bag	超能力Ｚ
+buginium-z--bag	虫Ｚ
+rockium-z--bag	岩石Ｚ
+ghostium-z--bag	幽灵Ｚ
+dragonium-z--bag	龙Ｚ
+darkinium-z--bag	恶Ｚ
+steelium-z--bag	钢Ｚ
+fairium-z--bag	妖精Ｚ
+pikanium-z--bag	皮卡丘Ｚ
+decidium-z--bag	狙射树枭Ｚ
+incinium-z--bag	炽焰咆哮虎Ｚ
+primarium-z--bag	西狮海壬Ｚ
+tapunium-z--bag	卡璞Ｚ
+marshadium-z--bag	玛夏多Ｚ
+aloraichium-z--bag	阿罗雷Ｚ
+snorlium-z--bag	卡比兽Ｚ
+eevium-z--bag	伊布Ｚ
+mewnium-z--bag	梦幻Ｚ
+pikashunium-z--bag	智皮卡Ｚ
+solganium-z--held	索尔迦雷欧Ｚ
+lunalium-z--held	露奈雅拉Ｚ
+ultranecrozium-z--held	究极奈克洛Ｚ
+mimikium-z--held	谜拟ＱＺ
+lycanium-z--held	鬃岩狼人Ｚ
+kommonium-z--held	杖尾鳞甲龙Ｚ
+solganium-z--bag	索尔迦雷欧Ｚ
+lunalium-z--bag	露奈雅拉Ｚ
+ultranecrozium-z--bag	究极奈克洛Ｚ
+mimikium-z--bag	谜拟ＱＺ
+lycanium-z--bag	鬃岩狼人Ｚ
+kommonium-z--bag	杖尾鳞甲龙Ｚ
+z-power-ring	Ｚ强力手环
+pink-petal	粉红花瓣
+orange-petal	橙色花瓣
+blue-petal	蓝色花瓣
+red-petal	红色花瓣
+green-petal	绿色花瓣
+yellow-petal	黄色花瓣
+purple-petal	紫色花瓣
+rainbow-flower	虹色之花
+surge-badge	桔色徽章
+n-solarizer--merge	奈克洛索尔合体器
+n-lunarizer--merge	奈克洛露奈合体器
+n-solarizer--split	奈克洛索尔合体器
+n-lunarizer--split	奈克洛露奈合体器
+ilimas-normalium-z	伊利马一般Ｚ
+left-poke-ball	留下的精灵球
+roto-hatch	孵蛋碰碰
+roto-bargain	优惠碰碰
+roto-prize-money	零花钱碰碰
+roto-exp-points	经验碰碰
+roto-friendship	亲密碰碰
+roto-encounter	相遇碰碰
+roto-stealth	隐身碰碰
+roto-hp-restore	ＨＰ回复碰碰
+roto-pp-restore	ＰＰ回复碰碰
+roto-boost	加油碰碰
+roto-catch	捕捉碰碰
+autograph	马志士的签名
+pokemon-box	宝可梦盒
+medicine-pocket	回复口袋
+candy-jar	糖果罐
+power-up-pocket	强化口袋
+clothing-trunk	换装箱
+catching-pocket	捕捉口袋
+battle-pocket	对战口袋
+silver-razz-berry	银色蔓莓果
+golden-razz-berry	金色蔓莓果
+silver-nanab-berry	银色蕉香果
+golden-nanab-berry	金色蕉香果
+silver-pinap-berry	银色凰梨果
+golden-pinap-berry	金色凰梨果
+secret-key--letsgo	秘密钥匙
+ss-ticket--letsgo	船票
+parcel--letsgo	包裹
+card-key--letsgo	钥匙卡
+stretchy-spring	松掉的弹簧
+chalky-stone	粉笔石
+marble	弹珠
+lone-earring	一边的耳环
+beach-glass	海边的玻璃
+gold-leaf	金色叶子
+silver-leaf	银色叶子
+polished-mud-ball	光滑泥球
+tropical-shell	南国贝壳
+leaf-letter--pikachu	树叶信
+leaf-letter--eevee	树叶信
+small-bouquet	小小花束
+lure	引虫香水
+super-lure	白银香水
+max-lure	黄金香水
+pewter-crunchies	深灰米果
+health-candy	元气糖果
+mighty-candy	力量糖果
+tough-candy	守护糖果
+smart-candy	知识糖果
+courage-candy	心灵糖果
+quick-candy	敏捷糖果
+health-candy-l	元气糖果Ｌ
+mighty-candy-l	力量糖果Ｌ
+tough-candy-l	守护糖果Ｌ
+smart-candy-l	知识糖果Ｌ
+courage-candy-l	心灵糖果Ｌ
+quick-candy-l	敏捷糖果Ｌ
+health-candy-xl	元气糖果ＸＬ
+mighty-candy-xl	力量糖果ＸＬ
+tough-candy-xl	守护糖果ＸＬ
+smart-candy-xl	知识糖果ＸＬ
+courage-candy-xl	心灵糖果ＸＬ
+quick-candy-xl	敏捷糖果ＸＬ
+bulbasaur-candy	妙蛙种子的糖果
+charmander-candy	小火龙的糖果
+squirtle-candy	杰尼龟的糖果
+caterpie-candy	绿毛虫的糖果
+weedle-candy	独角虫的糖果
+pidgey-candy	波波的糖果
+rattata-candy	小拉达的糖果
+spearow-candy	烈雀的糖果
+ekans-candy	阿柏蛇的糖果
+pikachu-candy	皮卡丘的糖果
+sandshrew-candy	穿山鼠的糖果
+nidoran-f-candy	尼多兰的糖果
+nidoran-m-candy	尼多朗的糖果
+clefairy-candy	皮皮的糖果
+vulpix-candy	六尾的糖果
+jigglypuff-candy	胖丁的糖果
+zubat-candy	超音蝠的糖果
+oddish-candy	走路草的糖果
+paras-candy	派拉斯的糖果
+venonat-candy	毛球的糖果
+diglett-candy	地鼠的糖果
+meowth-candy	喵喵的糖果
+psyduck-candy	可达鸭的糖果
+mankey-candy	猴怪的糖果
+growlithe-candy	卡蒂狗的糖果
+poliwag-candy	蚊香蝌蚪的糖果
+abra-candy	凯西的糖果
+machop-candy	腕力的糖果
+bellsprout-candy	喇叭芽的糖果
+tentacool-candy	玛瑙水母的糖果
+geodude-candy	小拳石的糖果
+ponyta-candy	小火马的糖果
+slowpoke-candy	呆呆兽的糖果
+magnemite-candy	小磁怪的糖果
+farfetchd-candy	大葱鸭的糖果
+doduo-candy	嘟嘟的糖果
+seel-candy	小海狮的糖果
+grimer-candy	臭泥的糖果
+shellder-candy	大舌贝的糖果
+gastly-candy	鬼斯的糖果
+onix-candy	大岩蛇的糖果
+drowzee-candy	催眠貘的糖果
+krabby-candy	大钳蟹的糖果
+voltorb-candy	霹雳电球的糖果
+exeggcute-candy	蛋蛋的糖果
+cubone-candy	卡拉卡拉的糖果
+hitmonlee-candy	飞腿郎的糖果
+hitmonchan-candy	快拳郎的糖果
+lickitung-candy	大舌头的糖果
+koffing-candy	瓦斯弹的糖果
+rhyhorn-candy	独角犀牛的糖果
+chansey-candy	吉利蛋的糖果
+tangela-candy	蔓藤怪的糖果
+kangaskhan-candy	袋兽的糖果
+horsea-candy	墨海马的糖果
+goldeen-candy	角金鱼的糖果
+staryu-candy	海星星的糖果
+mr-mime-candy	魔墙人偶的糖果
+scyther-candy	飞天螳螂的糖果
+jynx-candy	迷唇姐的糖果
+electabuzz-candy	电击兽的糖果
+pinsir-candy	凯罗斯的糖果
+tauros-candy	肯泰罗的糖果
+magikarp-candy	鲤鱼王的糖果
+lapras-candy	拉普拉斯的糖果
+ditto-candy	百变怪的糖果
+eevee-candy	伊布的糖果
+porygon-candy	多边兽的糖果
+omanyte-candy	菊石兽的糖果
+kabuto-candy	化石盔的糖果
+aerodactyl-candy	化石翼龙的糖果
+snorlax-candy	卡比兽的糖果
+articuno-candy	急冻鸟的糖果
+zapdos-candy	闪电鸟的糖果
+moltres-candy	火焰鸟的糖果
+dratini-candy	迷你龙的糖果
+mewtwo-candy	超梦的糖果
+mew-candy	梦幻的糖果
+meltan-candy	美录坦的糖果
+magmar-candy	鸭嘴火兽的糖果
+endorsement	推荐函
+pokemon-box-link	宝可梦盒
+wishing-star	许愿星
+dynamax-band	极巨腕带
+fishing-rod--galar	钓竿
+rotom-bike	洛托姆自行车
+sausages	粗绞肉香肠
+bobs-food-tin	饱伯罐头
+bachs-food-tin	巴哈罐头
+tin-of-beans	豆子罐头
+bread	吐司面包
+pasta	通心粉
+mixed-mushrooms	袋装蕈菇
+smoke-poke-tail	烟熏尾巴
+large-leek	粗枝大葱
+fancy-apple	特选苹果
+brittle-bones	细骨
+pack-of-potatoes	袋装土豆
+pungent-root	水边香草
+salad-mix	袋装蔬菜
+fried-food	炸物拼盘
+boiled-egg	水煮蛋
+camping-gear	露营组合
+rusted-sword	腐朽的剑
+rusted-shield	腐朽的盾
+fossilized-bird	化石鸟
+fossilized-fish	化石鱼
+fossilized-drake	化石龙
+fossilized-dino	化石海兽
+strawberry-sweet	草莓糖饰
+love-sweet	爱心糖饰
+berry-sweet	野莓糖饰
+clover-sweet	幸运草糖饰
+flower-sweet	花朵糖饰
+star-sweet	星星糖饰
+ribbon-sweet	蝴蝶结糖饰
+sweet-apple	甜甜苹果
+tart-apple	酸酸苹果
+throat-spray	爽喉喷雾
+eject-pack	避难背包
+heavy-duty-boots	厚底靴
+blunder-policy	打空保险
+room-service	客房服务
+utility-umbrella	万能伞
+exp-candy-xs	经验糖果ＸＳ
+exp-candy-s	经验糖果Ｓ
+exp-candy-m	经验糖果Ｍ
+exp-candy-l	经验糖果Ｌ
+exp-candy-xl	经验糖果ＸＬ
+dynamax-candy	极巨糖果
+tr00	招式记录００
+tr01	招式记录０１
+tr02	招式记录０２
+tr03	招式记录０３
+tr04	招式记录０４
+tr05	招式记录０５
+tr06	招式记录０６
+tr07	招式记录０７
+tr08	招式记录０８
+tr09	招式记录０９
+tr10	招式记录１０
+tr11	招式记录１１
+tr12	招式记录１２
+tr13	招式记录１３
+tr14	招式记录１４
+tr15	招式记录１５
+tr16	招式记录１６
+tr17	招式记录１７
+tr18	招式记录１８
+tr19	招式记录１９
+tr20	招式记录２０
+tr21	招式记录２１
+tr22	招式记录２２
+tr23	招式记录２３
+tr24	招式记录２４
+tr25	招式记录２５
+tr26	招式记录２６
+tr27	招式记录２７
+tr28	招式记录２８
+tr29	招式记录２９
+tr30	招式记录３０
+tr31	招式记录３１
+tr32	招式记录３２
+tr33	招式记录３３
+tr34	招式记录３４
+tr35	招式记录３５
+tr36	招式记录３６
+tr37	招式记录３７
+tr38	招式记录３８
+tr39	招式记录３９
+tr40	招式记录４０
+tr41	招式记录４１
+tr42	招式记录４２
+tr43	招式记录４３
+tr44	招式记录４４
+tr45	招式记录４５
+tr46	招式记录４６
+tr47	招式记录４７
+tr48	招式记录４８
+tr49	招式记录４９
+tr50	招式记录５０
+tr51	招式记录５１
+tr52	招式记录５２
+tr53	招式记录５３
+tr54	招式记录５４
+tr55	招式记录５５
+tr56	招式记录５６
+tr57	招式记录５７
+tr58	招式记录５８
+tr59	招式记录５９
+tr60	招式记录６０
+tr61	招式记录６１
+tr62	招式记录６２
+tr63	招式记录６３
+tr64	招式记录６４
+tr65	招式记录６５
+tr66	招式记录６６
+tr67	招式记录６７
+tr68	招式记录６８
+tr69	招式记录６９
+tr70	招式记录７０
+tr71	招式记录７１
+tr72	招式记录７２
+tr73	招式记录７３
+tr74	招式记录７４
+tr75	招式记录７５
+tr76	招式记录７６
+tr77	招式记录７７
+tr78	招式记录７８
+tr79	招式记录７９
+tr80	招式记录８０
+tr81	招式记录８１
+tr82	招式记录８２
+tr83	招式记录８３
+tr84	招式记录８４
+tr85	招式记录８５
+tr86	招式记录８６
+tr87	招式记录８７
+tr88	招式记录８８
+tr89	招式记录８９
+tr90	招式记录９０
+tr91	招式记录９１
+tr92	招式记录９２
+tr93	招式记录９３
+tr94	招式记录９４
+tr95	招式记录９５
+tr96	招式记录９６
+tr97	招式记录９７
+tr98	招式记录９８
+tr99	招式记录９９
+tm00	招式学习器００
+lonely-mint	怕寂寞薄荷
+adamant-mint	固执薄荷
+naughty-mint	顽皮薄荷
+brave-mint	勇敢薄荷
+bold-mint	大胆薄荷
+impish-mint	淘气薄荷
+lax-mint	乐天薄荷
+relaxed-mint	悠闲薄荷
+modest-mint	内敛薄荷
+mild-mint	慢吞吞薄荷
+rash-mint	马虎薄荷
+quiet-mint	冷静薄荷
+calm-mint	温和薄荷
+gentle-mint	温顺薄荷
+careful-mint	慎重薄荷
+sassy-mint	自大薄荷
+timid-mint	胆小薄荷
+hasty-mint	急躁薄荷
+jolly-mint	爽朗薄荷
+naive-mint	天真薄荷
+serious-mint	认真薄荷
+wishing-piece	许愿星块
+cracked-pot	破裂的茶壶
+chipped-pot	缺损的茶壶
+hi-tech-earbuds	厉害耳塞
+fruit-bunch	袋装果实
+moomoo-cheese	哞哞乳酪
+spice-mix	香料组合
+fresh-cream	鲜鲜奶油
+packaged-curry	即食咖喱
+coconut-milk	椰奶
+instant-noodles	即食面
+precooked-burger	即食肉排
+gigantamix	超极粉
+wishing-chip	许愿星碎片
+rotom-bike--water-mode	洛托姆自行车
+catching-charm	防晃护符
+old-letter	陈旧的信
+band-autograph	乐队的签名
+sonias-book	索妮亚的书
+rotom-catalog	洛托姆型录
+dynamax-crystal-and458	★And458
+dynamax-crystal-and15	★And15
+dynamax-crystal-and337	★And337
+dynamax-crystal-and603	★And603
+dynamax-crystal-and390	★And390
+dynamax-crystal-sgr6879	★Sgr6879
+dynamax-crystal-sgr6859	★Sgr6859
+dynamax-crystal-sgr6913	★Sgr6913
+dynamax-crystal-sgr7348	★Sgr7348
+dynamax-crystal-sgr7121	★Sgr7121
+dynamax-crystal-sgr6746	★Sgr6746
+dynamax-crystal-sgr7194	★Sgr7194
+dynamax-crystal-sgr7337	★Sgr7337
+dynamax-crystal-sgr7343	★Sgr7343
+dynamax-crystal-sgr6812	★Sgr6812
+dynamax-crystal-sgr7116	★Sgr7116
+dynamax-crystal-sgr7264	★Sgr7264
+dynamax-crystal-sgr7597	★Sgr7597
+dynamax-crystal-del7882	★Del7882
+dynamax-crystal-del7906	★Del7906
+dynamax-crystal-del7852	★Del7852
+dynamax-crystal-psc596	★Psc596
+dynamax-crystal-psc361	★Psc361
+dynamax-crystal-psc510	★Psc510
+dynamax-crystal-psc437	★Psc437
+dynamax-crystal-psc8773	★Psc8773
+dynamax-crystal-lep1865	★Lep1865
+dynamax-crystal-lep1829	★Lep1829
+dynamax-crystal-boo5340	★Boo5340
+dynamax-crystal-boo5506	★Boo5506
+dynamax-crystal-boo5435	★Boo5435
+dynamax-crystal-boo5602	★Boo5602
+dynamax-crystal-boo5733	★Boo5733
+dynamax-crystal-boo5235	★Boo5235
+dynamax-crystal-boo5351	★Boo5351
+dynamax-crystal-hya3748	★Hya3748
+dynamax-crystal-hya3903	★Hya3903
+dynamax-crystal-hya3418	★Hya3418
+dynamax-crystal-hya3482	★Hya3482
+dynamax-crystal-hya3845	★Hya3845
+dynamax-crystal-eri1084	★Eri1084
+dynamax-crystal-eri472	★Eri472
+dynamax-crystal-eri1666	★Eri1666
+dynamax-crystal-eri897	★Eri897
+dynamax-crystal-eri1231	★Eri1231
+dynamax-crystal-eri874	★Eri874
+dynamax-crystal-eri1298	★Eri1298
+dynamax-crystal-eri1325	★Eri1325
+dynamax-crystal-eri984	★Eri984
+dynamax-crystal-eri1464	★Eri1464
+dynamax-crystal-eri1393	★Eri1393
+dynamax-crystal-eri850	★Eri850
+dynamax-crystal-tau1409	★Tau1409
+dynamax-crystal-tau1457	★Tau1457
+dynamax-crystal-tau1165	★Tau1165
+dynamax-crystal-tau1791	★Tau1791
+dynamax-crystal-tau1910	★Tau1910
+dynamax-crystal-tau1346	★Tau1346
+dynamax-crystal-tau1373	★Tau1373
+dynamax-crystal-tau1412	★Tau1412
+dynamax-crystal-cma2491	★CMa2491
+dynamax-crystal-cma2693	★CMa2693
+dynamax-crystal-cma2294	★CMa2294
+dynamax-crystal-cma2827	★CMa2827
+dynamax-crystal-cma2282	★CMa2282
+dynamax-crystal-cma2618	★CMa2618
+dynamax-crystal-cma2657	★CMa2657
+dynamax-crystal-cma2646	★CMa2646
+dynamax-crystal-uma4905	★UMa4905
+dynamax-crystal-uma4301	★UMa4301
+dynamax-crystal-uma5191	★UMa5191
+dynamax-crystal-uma5054	★UMa5054
+dynamax-crystal-uma4295	★UMa4295
+dynamax-crystal-uma4660	★UMa4660
+dynamax-crystal-uma4554	★UMa4554
+dynamax-crystal-uma4069	★UMa4069
+dynamax-crystal-uma3569	★UMa3569
+dynamax-crystal-uma3323	★UMa3323
+dynamax-crystal-uma4033	★UMa4033
+dynamax-crystal-uma4377	★UMa4377
+dynamax-crystal-uma4375	★UMa4375
+dynamax-crystal-uma4518	★UMa4518
+dynamax-crystal-uma3594	★UMa3594
+dynamax-crystal-vir5056	★Vir5056
+dynamax-crystal-vir4825	★Vir4825
+dynamax-crystal-vir4932	★Vir4932
+dynamax-crystal-vir4540	★Vir4540
+dynamax-crystal-vir4689	★Vir4689
+dynamax-crystal-vir5338	★Vir5338
+dynamax-crystal-vir4910	★Vir4910
+dynamax-crystal-vir5315	★Vir5315
+dynamax-crystal-vir5359	★Vir5359
+dynamax-crystal-vir5409	★Vir5409
+dynamax-crystal-vir5107	★Vir5107
+dynamax-crystal-ari617	★Ari617
+dynamax-crystal-ari553	★Ari553
+dynamax-crystal-ari546	★Ari546
+dynamax-crystal-ari951	★Ari951
+dynamax-crystal-ori1713	★Ori1713
+dynamax-crystal-ori2061	★Ori2061
+dynamax-crystal-ori1790	★Ori1790
+dynamax-crystal-ori1903	★Ori1903
+dynamax-crystal-ori1948	★Ori1948
+dynamax-crystal-ori2004	★Ori2004
+dynamax-crystal-ori1852	★Ori1852
+dynamax-crystal-ori1879	★Ori1879
+dynamax-crystal-ori1899	★Ori1899
+dynamax-crystal-ori1543	★Ori1543
+dynamax-crystal-cas21	★Cas21
+dynamax-crystal-cas168	★Cas168
+dynamax-crystal-cas403	★Cas403
+dynamax-crystal-cas153	★Cas153
+dynamax-crystal-cas542	★Cas542
+dynamax-crystal-cas219	★Cas219
+dynamax-crystal-cas265	★Cas265
+dynamax-crystal-cnc3572	★Cnc3572
+dynamax-crystal-cnc3208	★Cnc3208
+dynamax-crystal-cnc3461	★Cnc3461
+dynamax-crystal-cnc3449	★Cnc3449
+dynamax-crystal-cnc3429	★Cnc3429
+dynamax-crystal-cnc3627	★Cnc3627
+dynamax-crystal-cnc3268	★Cnc3268
+dynamax-crystal-cnc3249	★Cnc3249
+dynamax-crystal-com4968	★Com4968
+dynamax-crystal-crv4757	★Crv4757
+dynamax-crystal-crv4623	★Crv4623
+dynamax-crystal-crv4662	★Crv4662
+dynamax-crystal-crv4786	★Crv4786
+dynamax-crystal-aur1708	★Aur1708
+dynamax-crystal-aur2088	★Aur2088
+dynamax-crystal-aur1605	★Aur1605
+dynamax-crystal-aur2095	★Aur2095
+dynamax-crystal-aur1577	★Aur1577
+dynamax-crystal-aur1641	★Aur1641
+dynamax-crystal-aur1612	★Aur1612
+dynamax-crystal-pav7790	★Pav7790
+dynamax-crystal-cet911	★Cet911
+dynamax-crystal-cet681	★Cet681
+dynamax-crystal-cet188	★Cet188
+dynamax-crystal-cet539	★Cet539
+dynamax-crystal-cet804	★Cet804
+dynamax-crystal-cep8974	★Cep8974
+dynamax-crystal-cep8162	★Cep8162
+dynamax-crystal-cep8238	★Cep8238
+dynamax-crystal-cep8417	★Cep8417
+dynamax-crystal-cen5267	★Cen5267
+dynamax-crystal-cen5288	★Cen5288
+dynamax-crystal-cen551	★Cen551
+dynamax-crystal-cen5459	★Cen5459
+dynamax-crystal-cen5460	★Cen5460
+dynamax-crystal-cmi2943	★CMi2943
+dynamax-crystal-cmi2845	★CMi2845
+dynamax-crystal-equ8131	★Equ8131
+dynamax-crystal-vul7405	★Vul7405
+dynamax-crystal-umi424	★UMi424
+dynamax-crystal-umi5563	★UMi5563
+dynamax-crystal-umi5735	★UMi5735
+dynamax-crystal-umi6789	★UMi6789
+dynamax-crystal-crt4287	★Crt4287
+dynamax-crystal-lyr7001	★Lyr7001
+dynamax-crystal-lyr7178	★Lyr7178
+dynamax-crystal-lyr7106	★Lyr7106
+dynamax-crystal-lyr7298	★Lyr7298
+dynamax-crystal-ara6585	★Ara6585
+dynamax-crystal-sco6134	★Sco6134
+dynamax-crystal-sco6527	★Sco6527
+dynamax-crystal-sco6553	★Sco6553
+dynamax-crystal-sco5953	★Sco5953
+dynamax-crystal-sco5984	★Sco5984
+dynamax-crystal-sco6508	★Sco6508
+dynamax-crystal-sco6084	★Sco6084
+dynamax-crystal-sco5944	★Sco5944
+dynamax-crystal-sco6630	★Sco6630
+dynamax-crystal-sco6027	★Sco6027
+dynamax-crystal-sco6247	★Sco6247
+dynamax-crystal-sco6252	★Sco6252
+dynamax-crystal-sco5928	★Sco5928
+dynamax-crystal-sco6241	★Sco6241
+dynamax-crystal-sco6165	★Sco6165
+dynamax-crystal-tri544	★Tri544
+dynamax-crystal-leo3982	★Leo3982
+dynamax-crystal-leo4534	★Leo4534
+dynamax-crystal-leo4357	★Leo4357
+dynamax-crystal-leo4057	★Leo4057
+dynamax-crystal-leo4359	★Leo4359
+dynamax-crystal-leo4031	★Leo4031
+dynamax-crystal-leo3852	★Leo3852
+dynamax-crystal-leo3905	★Leo3905
+dynamax-crystal-leo3773	★Leo3773
+dynamax-crystal-gru8425	★Gru8425
+dynamax-crystal-gru8636	★Gru8636
+dynamax-crystal-gru8353	★Gru8353
+dynamax-crystal-lib5685	★Lib5685
+dynamax-crystal-lib5531	★Lib5531
+dynamax-crystal-lib5787	★Lib5787
+dynamax-crystal-lib5603	★Lib5603
+dynamax-crystal-pup3165	★Pup3165
+dynamax-crystal-pup3185	★Pup3185
+dynamax-crystal-pup3045	★Pup3045
+dynamax-crystal-cyg7924	★Cyg7924
+dynamax-crystal-cyg7417	★Cyg7417
+dynamax-crystal-cyg7796	★Cyg7796
+dynamax-crystal-cyg8301	★Cyg8301
+dynamax-crystal-cyg7949	★Cyg7949
+dynamax-crystal-cyg7528	★Cyg7528
+dynamax-crystal-oct7228	★Oct7228
+dynamax-crystal-col1956	★Col1956
+dynamax-crystal-col2040	★Col2040
+dynamax-crystal-col2177	★Col2177
+dynamax-crystal-gem2990	★Gem2990
+dynamax-crystal-gem2891	★Gem2891
+dynamax-crystal-gem2421	★Gem2421
+dynamax-crystal-gem2473	★Gem2473
+dynamax-crystal-gem2216	★Gem2216
+dynamax-crystal-gem2777	★Gem2777
+dynamax-crystal-gem2650	★Gem2650
+dynamax-crystal-gem2286	★Gem2286
+dynamax-crystal-gem2484	★Gem2484
+dynamax-crystal-gem2930	★Gem2930
+dynamax-crystal-peg8775	★Peg8775
+dynamax-crystal-peg8781	★Peg8781
+dynamax-crystal-peg39	★Peg39
+dynamax-crystal-peg8308	★Peg8308
+dynamax-crystal-peg8650	★Peg8650
+dynamax-crystal-peg8634	★Peg8634
+dynamax-crystal-peg8684	★Peg8684
+dynamax-crystal-peg8450	★Peg8450
+dynamax-crystal-peg8880	★Peg8880
+dynamax-crystal-peg8905	★Peg8905
+dynamax-crystal-oph6556	★Oph6556
+dynamax-crystal-oph6378	★Oph6378
+dynamax-crystal-oph6603	★Oph6603
+dynamax-crystal-oph6149	★Oph6149
+dynamax-crystal-oph6056	★Oph6056
+dynamax-crystal-oph6075	★Oph6075
+dynamax-crystal-ser5854	★Ser5854
+dynamax-crystal-ser7141	★Ser7141
+dynamax-crystal-ser5879	★Ser5879
+dynamax-crystal-her6406	★Her6406
+dynamax-crystal-her6148	★Her6148
+dynamax-crystal-her6410	★Her6410
+dynamax-crystal-her6526	★Her6526
+dynamax-crystal-her6117	★Her6117
+dynamax-crystal-her6008	★Her6008
+dynamax-crystal-per936	★Per936
+dynamax-crystal-per1017	★Per1017
+dynamax-crystal-per1131	★Per1131
+dynamax-crystal-per1228	★Per1228
+dynamax-crystal-per834	★Per834
+dynamax-crystal-per941	★Per941
+dynamax-crystal-phe99	★Phe99
+dynamax-crystal-phe338	★Phe338
+dynamax-crystal-vel3634	★Vel3634
+dynamax-crystal-vel3485	★Vel3485
+dynamax-crystal-vel3734	★Vel3734
+dynamax-crystal-aqr8232	★Aqr8232
+dynamax-crystal-aqr8414	★Aqr8414
+dynamax-crystal-aqr8709	★Aqr8709
+dynamax-crystal-aqr8518	★Aqr8518
+dynamax-crystal-aqr7950	★Aqr7950
+dynamax-crystal-aqr8499	★Aqr8499
+dynamax-crystal-aqr8610	★Aqr8610
+dynamax-crystal-aqr8264	★Aqr8264
+dynamax-crystal-cru4853	★Cru4853
+dynamax-crystal-cru4730	★Cru4730
+dynamax-crystal-cru4763	★Cru4763
+dynamax-crystal-cru4700	★Cru4700
+dynamax-crystal-cru4656	★Cru4656
+dynamax-crystal-psa8728	★PsA8728
+dynamax-crystal-tra6217	★TrA6217
+dynamax-crystal-cap7776	★Cap7776
+dynamax-crystal-cap7754	★Cap7754
+dynamax-crystal-cap8278	★Cap8278
+dynamax-crystal-cap8322	★Cap8322
+dynamax-crystal-cap7773	★Cap7773
+dynamax-crystal-sge7479	★Sge7479
+dynamax-crystal-car2326	★Car2326
+dynamax-crystal-car3685	★Car3685
+dynamax-crystal-car3307	★Car3307
+dynamax-crystal-car3699	★Car3699
+dynamax-crystal-dra5744	★Dra5744
+dynamax-crystal-dra5291	★Dra5291
+dynamax-crystal-dra6705	★Dra6705
+dynamax-crystal-dra6536	★Dra6536
+dynamax-crystal-dra7310	★Dra7310
+dynamax-crystal-dra6688	★Dra6688
+dynamax-crystal-dra4434	★Dra4434
+dynamax-crystal-dra6370	★Dra6370
+dynamax-crystal-dra7462	★Dra7462
+dynamax-crystal-dra6396	★Dra6396
+dynamax-crystal-dra6132	★Dra6132
+dynamax-crystal-dra6636	★Dra6636
+dynamax-crystal-cvn4915	★CVn4915
+dynamax-crystal-cvn4785	★CVn4785
+dynamax-crystal-cvn4846	★CVn4846
+dynamax-crystal-aql7595	★Aql7595
+dynamax-crystal-aql7557	★Aql7557
+dynamax-crystal-aql7525	★Aql7525
+dynamax-crystal-aql7602	★Aql7602
+dynamax-crystal-aql7235	★Aql7235
+max-honey	极巨甜蜜
+max-mushrooms	极巨菇菇
+galarica-twig	伽勒豆蔻枝
+galarica-cuff	伽勒豆蔻手环
+style-card	时尚名人卡
+armor-pass	铠甲车票
+rotom-bike--sparkling-white	洛托姆自行车
+rotom-bike--glistening-black	洛托姆自行车
+exp-charm	经验护符
+armorite-ore	铠甲矿石
+mark-charm	证章护符
+reins-of-unity--merge	牵绊缰绳
+reins-of-unity--split	牵绊缰绳
+galarica-wreath	伽勒豆蔻花圈
+legendary-clue-1	传说笔记１
+legendary-clue-2	传说笔记２
+legendary-clue-3	传说笔记３
+legendary-clue-question	传说笔记？
+crown-pass	王冠车票
+wooden-crown	木雕王冠
+radiant-petal	光辉花瓣
+white-mane-hair	白色鬃毛
+black-mane-hair	黑色鬃毛
+iceroot-carrot	冰萝卜
+shaderoot-carrot	黑萝卜
+dynite-ore	极矿石
+carrot-seeds	萝卜种子
+ability-patch	特性膏药
+reins-of-unity	牵绊缰绳
+adamant-crystal	大金刚宝玉	[HANT]
+lustrous-globe	大白宝玉	[HANT]
+griseous-core	大白金宝玉	[HANT]
+blank-plate	净空石板	[HANT]
+strange-ball	奇异球	[HANT]
+legend-plate	传说石板	[HANT]
+rotom-phone	手机洛托姆	[HANT]
+sandwich	三明治	[HANT]
+koraidons-poke-ball	故勒顿的球	[HANT]
+miraidons-poke-ball	密勒顿的球	[HANT]
+tera-orb	太晶珠	[HANT]
+scarlet-book	朱之书	[HANT]
+violet-book	紫之书	[HANT]
+kofus-wallet	海岱的钱包	[HANT]
+tiny-bamboo-shoot	小竹笋	[HANT]
+big-bamboo-shoot	大竹笋	[HANT]
+scroll-of-darkness	恶之挂轴	[HANT]
+scroll-of-waters	水之挂轴	[HANT]
+malicious-armor	咒术之铠	[HANT]
+normal-tera-shard	一般太晶碎块	[HANT]
+fire-tera-shard	火太晶碎块	[HANT]
+water-tera-shard	水太晶碎块	[HANT]
+electric-tera-shard	电太晶碎块	[HANT]
+grass-tera-shard	草太晶碎块	[HANT]
+ice-tera-shard	冰太晶碎块	[HANT]
+fighting-tera-shard	格斗太晶碎块	[HANT]
+poison-tera-shard	毒太晶碎块	[HANT]
+ground-tera-shard	地面太晶碎块	[HANT]
+flying-tera-shard	飞行太晶碎块	[HANT]
+psychic-tera-shard	超能力太晶碎块	[HANT]
+bug-tera-shard	虫太晶碎块	[HANT]
+rock-tera-shard	岩石太晶碎块	[HANT]
+ghost-tera-shard	幽灵太晶碎块	[HANT]
+dragon-tera-shard	龙太晶碎块	[HANT]
+dark-tera-shard	恶太晶碎块	[HANT]
+steel-tera-shard	钢太晶碎块	[HANT]
+fairy-tera-shard	妖精太晶碎块	[HANT]
+booster-energy	驱劲能量	[HANT]
+ability-shield	特性护具	[HANT]
+clear-amulet	清净坠饰	[HANT]
+mirror-herb	模仿香草	[HANT]
+punching-glove	拳击手套	[HANT]
+covert-cloak	密探斗篷	[HANT]
+loaded-dice	机变骰子	[HANT]
+baguette	长棍面包	[HANT]
+mayonnaise	蛋黄酱	[HANT]
+ketchup	番茄酱	[HANT]
+mustard	黄芥末酱	[HANT]
+butter	黄油	[HANT]
+peanut-butter	花生酱	[HANT]
+chili-sauce	辣酱	[HANT]
+salt	盐	[HANT]
+pepper	胡椒	[HANT]
+yogurt	酸奶	[HANT]
+whipped-cream	鲜奶油	[HANT]
+cream-cheese	奶油芝士	[HANT]
+jam	莓果酱	[HANT]
+marmalade	橘子酱	[HANT]
+olive-oil	橄榄油	[HANT]
+vinegar	醋	[HANT]
+sweet-herba-mystica	秘传：甜味料	[HANT]
+salty-herba-mystica	秘传：咸味料	[HANT]
+sour-herba-mystica	秘传：酸味料	[HANT]
+bitter-herba-mystica	秘传：苦味料	[HANT]
+spicy-herba-mystica	秘传：辣味料	[HANT]
+lettuce	生菜	[HANT]
+tomato	西红柿片	[HANT]
+cherry-tomatoes	小西红柿块	[HANT]
+cucumber	小黄瓜片	[HANT]
+pickle	酸黄瓜片	[HANT]
+onion	洋葱片	[HANT]
+red-onion	红洋葱	[HANT]
+green-bell-pepper	青椒片	[HANT]
+red-bell-pepper	红椒片	[HANT]
+yellow-bell-pepper	黄椒片	[HANT]
+avocado	牛油果	[HANT]
+bacon	煎培根	[HANT]
+ham	火腿片	[HANT]
+prosciutto	生火腿	[HANT]
+chorizo	煎辣香肠	[HANT]
+herbed-sausage	香草香肠	[HANT]
+hamburger	汉堡排	[HANT]
+klawf-stick	毛崖蟹棒	[HANT]
+smoked-fillet	烟熏鱼片	[HANT]
+fried-fillet	炸鱼片	[HANT]
+egg	水煮蛋片	[HANT]
+potato-tortilla	烘蛋	[HANT]
+tofu	豆腐	[HANT]
+rice	米饭	[HANT]
+noodles	面条	[HANT]
+potato-salad	土豆色拉	[HANT]
+cheese	芝士片	[HANT]
+banana	香蕉片	[HANT]
+strawberry	草莓片	[HANT]
+apple	苹果片	[HANT]
+kiwi	奇异果片	[HANT]
+pineapple	凤梨片	[HANT]
+jalapeno	小辣椒	[HANT]
+horseradish	辣根	[HANT]
+curry-powder	咖喱粉	[HANT]
+wasabi	芥末酱	[HANT]
+watercress	豆瓣菜	[HANT]
+basil	罗勒	[HANT]
+venonat-fang	毛球的牙	[HANT]
+diglett-dirt	地鼠的土	[HANT]
+meowth-fur	喵喵的毛	[HANT]
+psyduck-down	可达鸭的羽绒	[HANT]
+mankey-fur	猴怪的毛	[HANT]
+growlithe-fur	卡蒂狗的毛	[HANT]
+slowpoke-claw	呆呆兽的爪子	[HANT]
+magnemite-screw	小磁怪的螺丝	[HANT]
+grimer-toxin	臭泥的毒素	[HANT]
+shellder-pearl	大舌贝的珍珠	[HANT]
+gastly-gas	鬼斯的气体	[HANT]
+drowzee-fur	催眠貘的毛	[HANT]
+voltorb-sparks	霹雳电球的电力	[HANT]
+scyther-claw	飞天螳螂的爪子	[HANT]
+tauros-hair	肯泰罗的毛	[HANT]
+magikarp-scales	鲤鱼王的鳞片	[HANT]
+ditto-goo	百变怪的黏糊	[HANT]
+eevee-fur	伊布的毛	[HANT]
+dratini-scales	迷你龙的鳞片	[HANT]
+pichu-fur	皮丘的毛	[HANT]
+igglybuff-fluff	宝宝丁的毛	[HANT]
+mareep-wool	咩利羊的毛球	[HANT]
+hoppip-leaf	毽子草的叶片	[HANT]
+sunkern-leaf	向日种子的叶片	[HANT]
+murkrow-bauble	黑暗鸦的宝物	[HANT]
+misdreavus-tears	梦妖的眼泪	[HANT]
+girafarig-fur	麒麟奇的毛	[HANT]
+pineco-husk	榛果球的壳	[HANT]
+dunsparce-scales	土龙弟弟的鳞片	[HANT]
+qwilfish-spines	千针鱼的刺	[HANT]
+heracross-claw	赫拉克罗斯的爪子	[HANT]
+sneasel-claw	狃拉的爪子	[HANT]
+teddiursa-claw	熊宝宝的爪子	[HANT]
+delibird-parcel	信使鸟的行李	[HANT]
+houndour-fang	戴鲁比的牙	[HANT]
+phanpy-nail	小小象的爪子	[HANT]
+stantler-hair	惊角鹿的毛	[HANT]
+larvitar-claw	幼基拉斯的爪子	[HANT]
+wingull-feather	长翅鸥的羽毛	[HANT]
+ralts-dust	拉鲁拉丝的掉落物	[HANT]
+surskit-syrup	溜溜糖球的蜜	[HANT]
+shroomish-spores	蘑蘑菇的孢子	[HANT]
+slakoth-fur	懒人獭的毛	[HANT]
+makuhita-sweat	幕下力士的汗	[HANT]
+azurill-fur	露力丽的毛	[HANT]
+sableye-gem	勾魂眼的宝石	[HANT]
+meditite-sweat	玛沙那的汗	[HANT]
+gulpin-mucus	溶食兽的黏液	[HANT]
+numel-lava	呆火驼的熔岩	[HANT]
+torkoal-coal	煤炭龟的煤炭	[HANT]
+spoink-pearl	跳跳猪的珍珠	[HANT]
+cacnea-needle	刺球仙人掌的刺	[HANT]
+swablu-fluff	青绵鸟的羽毛	[HANT]
+zangoose-claw	猫鼬斩的爪子	[HANT]
+seviper-fang	饭匙蛇的牙	[HANT]
+barboach-slime	泥泥鳅的黏液	[HANT]
+shuppet-scrap	怨影娃娃的残片	[HANT]
+tropius-leaf	热带龙的叶片	[HANT]
+snorunt-fur	雪童子的毛	[HANT]
+luvdisc-scales	爱心鱼的鳞片	[HANT]
+bagon-scales	宝贝龙的鳞片	[HANT]
+starly-feather	姆克儿的羽毛	[HANT]
+kricketot-shell	圆法师的蜕壳	[HANT]
+shinx-fang	小猫怪的牙	[HANT]
+combee-honey	三蜜蜂的蜜	[HANT]
+pachirisu-fur	帕奇利兹的毛	[HANT]
+buizel-fur	泳圈鼬的毛	[HANT]
+shellos-mucus	无壳海兔的黏液	[HANT]
+drifloon-gas	飘飘球的气体	[HANT]
+stunky-fur	臭鼬噗的毛	[HANT]
+bronzor-fragment	铜镜怪的碎片	[HANT]
+bonsly-tears	盆才怪的眼泪	[HANT]
+happiny-dust	小福蛋的掉落物	[HANT]
+spiritomb-fragment	花岩怪的碎片	[HANT]
+gible-scales	圆陆鲨的鳞片	[HANT]
+riolu-fur	利欧路的毛	[HANT]
+hippopotas-sand	沙河马的沙	[HANT]
+croagunk-poison	不良蛙的毒素	[HANT]
+finneon-scales	荧光鱼的鳞片	[HANT]
+snover-berries	雪笠怪的果实	[HANT]
+rotom-sparks	洛托姆的电力	[HANT]
+petilil-leaf	百合根娃娃的叶片	[HANT]
+basculin-fang	野蛮鲈鱼的牙	[HANT]
+sandile-claw	黑眼鳄的爪子	[HANT]
+zorua-fur	索罗亚的毛	[HANT]
+gothita-eyelash	哥德宝宝的睫毛	[HANT]
+deerling-hair	四季鹿的毛	[HANT]
+foongus-spores	哎呀球菇的孢子	[HANT]
+alomomola-mucus	保姆曼波的黏液	[HANT]
+tynamo-slime	麻麻小鱼的黏液	[HANT]
+axew-scales	牙牙的鳞片	[HANT]
+cubchoo-fur	喷嚏熊的毛	[HANT]
+cryogonal-ice	几何雪花的冰	[HANT]
+pawniard-blade	驹刀小兵的刀	[HANT]
+rufflet-feather	毛头小鹰的羽毛	[HANT]
+deino-scales	单首龙的鳞片	[HANT]
+larvesta-fuzz	燃烧虫的毛	[HANT]
+fletchling-feather	小箭雀的羽毛	[HANT]
+scatterbug-powder	粉蝶虫的粉	[HANT]
+litleo-tuft	小狮狮的鬃毛	[HANT]
+flabebe-pollen	花蓓蓓的花粉	[HANT]
+skiddo-leaf	坐骑小羊的叶片	[HANT]
+skrelp-kelp	垃垃藻的碎藻	[HANT]
+clauncher-claw	铁臂枪虾的钳子	[HANT]
+hawlucha-down	摔角鹰人的羽绒	[HANT]
+dedenne-fur	咚咚鼠的毛	[HANT]
+goomy-goo	黏黏宝的黏液	[HANT]
+klefki-key	钥圈儿的钥匙	[HANT]
+bergmite-ice	冰宝的冰	[HANT]
+noibat-fur	嗡蝠的毛	[HANT]
+yungoos-fur	猫鼬少的毛	[HANT]
+crabrawler-shell	好胜蟹的壳	[HANT]
+oricorio-feather	花舞鸟的羽毛	[HANT]
+rockruff-rock	岩狗狗的岩石	[HANT]
+mareanie-spike	好坏星的刺	[HANT]
+mudbray-mud	泥驴仔的泥巴	[HANT]
+fomantis-leaf	伪螳草的叶片	[HANT]
+salandit-gas	夜盗火蜥的气体	[HANT]
+bounsweet-sweat	甜竹竹的汗	[HANT]
+oranguru-fur	智挥猩的毛	[HANT]
+passimian-fur	投掷猴的毛	[HANT]
+sandygast-sand	沙丘娃的沙	[HANT]
+komala-claw	树枕尾熊的爪子	[HANT]
+mimikyu-scrap	谜拟丘的残片	[HANT]
+bruxish-tooth	磨牙彩皮鱼的牙齿	[HANT]
+chewtle-claw	咬咬龟的爪子	[HANT]
+skwovet-fur	贪心栗鼠的毛	[HANT]
+arrokuda-scales	刺梭鱼的鳞片	[HANT]
+rookidee-feather	稚山雀的羽毛	[HANT]
+toxel-sparks	电音婴的电力	[HANT]
+falinks-sweat	列阵兵的汗	[HANT]
+cufant-tarnish	铜象的锈	[HANT]
+rolycoly-coal	小炭仔的煤炭	[HANT]
+silicobra-sand	沙包蛇的沙	[HANT]
+indeedee-fur	爱管侍的毛	[HANT]
+pincurchin-spines	啪嚓海胆的针	[HANT]
+snom-thread	雪吞虫的丝	[HANT]
+impidimp-hair	捣蛋小妖的毛	[HANT]
+applin-juice	啃果虫的果汁	[HANT]
+sinistea-chip	来悲茶的碎片	[HANT]
+hatenna-dust	迷布莉姆的掉落物	[HANT]
+stonjourner-stone	巨石丁的岩石	[HANT]
+eiscue-down	冰砌鹅的羽绒	[HANT]
+dreepy-powder	多龙梅西亚的粉	[HANT]
+lechonk-hair	爱吃豚的毛	[HANT]
+tarountula-thread	团珠蛛的丝	[HANT]
+nymble-claw	豆蟋蟀的爪子	[HANT]
+rellor-mud	虫滚泥的泥巴	[HANT]
+greavard-wax	墓仔狗的蜡	[HANT]
+flittle-down	飘飘雏的羽绒	[HANT]
+wiglett-sand	海地鼠的沙	[HANT]
+dondozo-whisker	吃吼霸的胡须	[HANT]
+veluza-fillet	轻身鳕的鱼片	[HANT]
+finizen-mucus	波普海豚的黏液	[HANT]
+smoliv-oil	迷你芙的油	[HANT]
+capsakid-seed	热辣娃的种子	[HANT]
+tadbulb-mucus	光蚪仔的黏液	[HANT]
+varoom-fume	噗隆隆的气体	[HANT]
+orthworm-tarnish	拖拖蚓的锈	[HANT]
+tandemaus-fur	一对鼠的毛	[HANT]
+cetoddle-grease	走鲸的油脂	[HANT]
+frigibax-scales	凉脊龙的鳞片	[HANT]
+tatsugiri-scales	米立龙的鳞片	[HANT]
+cyclizar-scales	摩托蜥的鳞片	[HANT]
+pawmi-fur	布拨的毛	[HANT]
+wattrel-feather	电海燕的羽毛	[HANT]
+bombirdier-feather	下石鸟的羽毛	[HANT]
+squawkabilly-feather	怒鹦哥的羽毛	[HANT]
+flamigo-down	缠红鹤的羽绒	[HANT]
+klawf-claw	毛崖蟹的钳子	[HANT]
+nacli-salt	盐石宝的盐	[HANT]
+glimmet-crystal	晶光芽的结晶	[HANT]
+shroodle-ink	滋汁鼹的墨汁	[HANT]
+fidough-fur	狗仔包的毛	[HANT]
+maschiff-fang	偶叫獒的牙	[HANT]
+bramblin-twig	纳噬草的枝条	[HANT]
+gimmighoul-coin	索财灵的硬币	[HANT]
+tinkatink-hair	小锻匠的毛	[HANT]
+charcadet-soot	炭小侍的煤灰	[HANT]
+toedscool-flaps	原野水母的薄片	[HANT]
+wooper-slime	乌波的黏液	[HANT]
+tm101	招式学习器１０１	[HANT]
+tm102	招式学习器１０２	[HANT]
+tm103	招式学习器１０３	[HANT]
+tm104	招式学习器１０４	[HANT]
+tm105	招式学习器１０５	[HANT]
+tm106	招式学习器１０６	[HANT]
+tm107	招式学习器１０７	[HANT]
+tm108	招式学习器１０８	[HANT]
+tm109	招式学习器１０９	[HANT]
+tm110	招式学习器１１０	[HANT]
+tm111	招式学习器１１１	[HANT]
+tm112	招式学习器１１２	[HANT]
+tm113	招式学习器１１３	[HANT]
+tm114	招式学习器１１４	[HANT]
+tm115	招式学习器１１５	[HANT]
+tm116	招式学习器１１６	[HANT]
+tm117	招式学习器１１７	[HANT]
+tm118	招式学习器１１８	[HANT]
+tm119	招式学习器１１９	[HANT]
+tm120	招式学习器１２０	[HANT]
+tm121	招式学习器１２１	[HANT]
+tm122	招式学习器１２２	[HANT]
+tm123	招式学习器１２３	[HANT]
+tm124	招式学习器１２４	[HANT]
+tm125	招式学习器１２５	[HANT]
+tm126	招式学习器１２６	[HANT]
+tm127	招式学习器１２７	[HANT]
+tm128	招式学习器１２８	[HANT]
+tm129	招式学习器１２９	[HANT]
+tm130	招式学习器１３０	[HANT]
+tm131	招式学习器１３１	[HANT]
+tm132	招式学习器１３２	[HANT]
+tm133	招式学习器１３３	[HANT]
+tm134	招式学习器１３４	[HANT]
+tm135	招式学习器１３５	[HANT]
+tm136	招式学习器１３６	[HANT]
+tm137	招式学习器１３７	[HANT]
+tm138	招式学习器１３８	[HANT]
+tm139	招式学习器１３９	[HANT]
+tm140	招式学习器１４０	[HANT]
+tm141	招式学习器１４１	[HANT]
+tm142	招式学习器１４２	[HANT]
+tm143	招式学习器１４３	[HANT]
+tm144	招式学习器１４４	[HANT]
+tm145	招式学习器１４５	[HANT]
+tm146	招式学习器１４６	[HANT]
+tm147	招式学习器１４７	[HANT]
+tm148	招式学习器１４８	[HANT]
+tm149	招式学习器１４９	[HANT]
+tm150	招式学习器１５０	[HANT]
+tm151	招式学习器１５１	[HANT]
+tm152	招式学习器１５２	[HANT]
+tm153	招式学习器１５３	[HANT]
+tm154	招式学习器１５４	[HANT]
+tm155	招式学习器１５５	[HANT]
+tm156	招式学习器１５６	[HANT]
+tm157	招式学习器１５７	[HANT]
+tm158	招式学习器１５８	[HANT]
+tm159	招式学习器１５９	[HANT]
+tm160	招式学习器１６０	[HANT]
+tm161	招式学习器１６１	[HANT]
+tm162	招式学习器１６２	[HANT]
+tm163	招式学习器１６３	[HANT]
+tm164	招式学习器１６４	[HANT]
+tm165	招式学习器１６５	[HANT]
+tm166	招式学习器１６６	[HANT]
+tm167	招式学习器１６７	[HANT]
+tm168	招式学习器１６８	[HANT]
+tm169	招式学习器１６９	[HANT]
+tm170	招式学习器１７０	[HANT]
+tm171	招式学习器１７１	[HANT]
+picnic-set	野餐组合	[HANT]
+academy-bottle	校园水壶	[HANT]
+polka-dot-bottle	圆点水壶	[HANT]
+striped-bottle	条纹水壶	[HANT]
+diamond-bottle	菱纹水壶	[HANT]
+academy-cup	校园水杯	[HANT]
+striped-cup	直条纹水杯	[HANT]
+polka-dot-cup	圆点水杯	[HANT]
+flower-pattern-cup	花朵水杯	[HANT]
+academy-tablecloth	校园桌巾	[HANT]
+whimsical-tablecloth	幻彩桌巾	[HANT]
+leafy-tablecloth	大自然桌巾	[HANT]
+spooky-tablecloth	鬼祟桌巾	[HANT]
+academy-ball	校园球	[HANT]
+marill-ball	玛力露球	[HANT]
+yarn-ball	毛线球	[HANT]
+cyber-ball	电竞球	[HANT]
+gold-pick	金色三明治签	[HANT]
+silver-pick	银色三明治签	[HANT]
+red-flag-pick	红旗子三明治签	[HANT]
+blue-flag-pick	蓝旗子三明治签	[HANT]
+pika-pika-pick	皮卡丘三明治签	[HANT]
+winking-pika-pick	眨眼皮卡丘三明治签	[HANT]
+vee-vee-pick	伊布三明治签	[HANT]
+smiling-vee-pick	笑脸伊布三明治签	[HANT]
+blue-poke-ball-pick	蓝珠珠三明治签	[HANT]
+auspicious-armor	庆祝之铠	[HANT]
+leaders-crest	头领凭证	[HANT]
+pink-bottle	粉红水壶	[HANT]
+blue-bottle	蓝色水壶	[HANT]
+yellow-bottle	黄色水壶	[HANT]
+steel-bottle-r	红纹不锈钢水壶	[HANT]
+steel-bottle-y	黄纹不锈钢水壶	[HANT]
+steel-bottle-b	蓝纹不锈钢水壶	[HANT]
+silver-bottle	银钛水壶	[HANT]
+barred-cup	横条纹水杯	[HANT]
+diamond-pattern-cup	菱纹水杯	[HANT]
+fire-pattern-cup	火焰水杯	[HANT]
+pink-cup	粉红水杯	[HANT]
+blue-cup	蓝色水杯	[HANT]
+yellow-cup	黄色水杯	[HANT]
+pikachu-cup	皮卡丘水杯	[HANT]
+eevee-cup	伊布水杯	[HANT]
+slowpoke-cup	呆呆兽水杯	[HANT]
+silver-cup	银钛水杯	[HANT]
+exercise-ball	瑜珈球	[HANT]
+plaid-tablecloth-y	黄色格子桌巾	[HANT]
+plaid-tablecloth-b	蓝色格子桌巾	[HANT]
+plaid-tablecloth-r	红色格子桌巾	[HANT]
+bw-grass-tablecloth	黑白草丛桌巾	[HANT]
+battle-tablecloth	对决桌巾	[HANT]
+monstrous-tablecloth	怪兽桌巾	[HANT]
+striped-tablecloth	条纹桌巾	[HANT]
+diamond-tablecloth	菱纹桌巾	[HANT]
+polka-dot-tablecloth	圆点桌巾	[HANT]
+lilac-tablecloth	紫色桌巾	[HANT]
+mint-tablecloth	浅绿桌巾	[HANT]
+peach-tablecloth	米色桌巾	[HANT]
+yellow-tablecloth	黄色桌巾	[HANT]
+blue-tablecloth	蓝色桌巾	[HANT]
+pink-tablecloth	粉红桌巾	[HANT]
+gold-bottle	金钛水壶	[HANT]
+bronze-bottle	铜钛水壶	[HANT]
+gold-cup	金钛水杯	[HANT]
+bronze-cup	铜钛水杯	[HANT]
+green-poke-ball-pick	绿珠珠三明治签	[HANT]
+red-poke-ball-pick	红珠珠三明治签	[HANT]
+party-sparkler-pick	烟花祝庆三明治签	[HANT]
+heroic-sword-pick	勇者之剑三明治签	[HANT]
+magical-star-pick	魔法星星三明治签	[HANT]
+magical-heart-pick	魔法甜心三明治签	[HANT]
+parasol-pick	阳伞三明治签	[HANT]
+blue-sky-flower-pick	晴空花三明治签	[HANT]
+sunset-flower-pick	夕阳花三明治签	[HANT]
+sunrise-flower-pick	朝霞花三明治签	[HANT]
+blue-dish	蓝色盘子	[HANT]
+green-dish	绿色盘子	[HANT]
+orange-dish	橘色盘子	[HANT]
+red-dish	红色盘子	[HANT]
+white-dish	白色盘子	[HANT]
+yellow-dish	黄色盘子	[HANT]

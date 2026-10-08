@@ -14,6 +14,8 @@
 - **完全离线**：识图用本地视觉模型 (Qwen2.5-VL-3B)，翻译用本地语言模型 (Qwen2.5-1.5B)，不依赖云服务
 - **流式输出**：OCR 和翻译均为流式，边识别边显示、边翻译边上屏，无需等整句完成
 - **窗口吸附**：翻译面板可吸附到游戏窗口，跟随游戏窗口移动
+- **悬浮显示**：提供工具条、悬浮球和字幕浮层，以及独立设置窗口
+- **宝可梦术语表**：内置宝可梦、招式、特性、道具和丰缘地点译名；可编辑 `assets/glossary/custom.tsv` 补充术语，重启后生效
 - **区域调整**：框选区域可随时拖拽移动、缩放，不用重新框选
 - **多语言**：支持 English / 中文 / 日本語 之间的翻译
 - **远程模式（可选）**：也可配置 OpenAI 兼容 API 做翻译，用本地识图 + 远程大模型
@@ -33,7 +35,7 @@
 
 ### 方式 A：预编译版（免 Rust 环境，推荐）
 
-从 [GitHub Releases](https://github.com/<your-username>/Xiangxu/releases) 下载 `Xiangxu-release.zip`，解压后：
+从 [GitHub Releases](https://github.com/smallclover/Xiangxu/releases) 下载 `Xiangxu-release.zip`，解压后：
 
 1. **双击 `xiangxu.exe`** 启动应用
 2. 打开设置 → **「模型资源」**，点击 **「一键下载缺失模型」**（约 4GB，带进度条）
@@ -46,7 +48,7 @@
 #### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/<your-username>/Xiangxu.git
+git clone https://github.com/smallclover/Xiangxu.git
 cd Xiangxu
 ```
 

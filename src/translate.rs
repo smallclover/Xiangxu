@@ -4,6 +4,7 @@
 //! 远程翻译使用系统内置的 curl.exe（Windows 10+ 自带）调用 OpenAI 兼容端点，
 //! 因此不引入额外网络依赖，整项目可离线编译；填入 Key 即可真翻译。
 
+use crate::glossary;
 use crate::lang::Lang;
 use image::DynamicImage;
 use serde_json::json;
@@ -129,15 +130,18 @@ fn manifest_path(rel: &str) -> String {
 /// - `LocalVisionLocal`：本地 llama.cpp 模型翻译（完全离线）。
 /// - `LocalVisionRemote`：远程 OpenAI 兼容 API 翻译（需要 API Key）。
 pub fn translate(text: &str, target: Lang, cfg: &TranslatorConfig) -> String {
+    // 术语预处理：与流式入口同一策略（预替换 + 保留译名提示）。
+    let (replaced, hits) = glossary::global().apply(text);
+    let text: &str = &replaced;
     match cfg.mode {
         AppMode::Mock => mock_translate(text),
-        AppMode::LocalVisionLocal => translate_local(text, target, cfg),
+        AppMode::LocalVisionLocal => translate_local(text, target, &hits, cfg),
         AppMode::LocalVisionRemote => {
             if cfg.api_key.trim().is_empty() {
                 // 远程模式但未填 Key：回退模拟，避免界面空白。
                 return mock_translate(text);
             }
-            match translate_via_curl(&cfg.endpoint, &cfg.api_key, &cfg.model, text, target) {
+            match translate_via_curl(&cfg.endpoint, &cfg.api_key, &cfg.model, text, target, &hits) {
                 Ok(t) if !t.trim().is_empty() => t,
                 Ok(_) => mock_translate(text),
                 Err(e) => format!("[翻译失败] {}", e),
@@ -157,13 +161,16 @@ pub fn translate_stream(
     cfg: &TranslatorConfig,
     on_chunk: &mut dyn FnMut(&str),
 ) -> String {
+    // 术语预处理：预替换专有名词 + 生成"保留译名"提示，所有翻译后端共用。
+    let (replaced, hits) = glossary::global().apply(text);
+    let text: &str = &replaced;
     match cfg.mode {
         AppMode::Mock => {
             let t = mock_translate(text);
             on_chunk(&t);
             t
         }
-        AppMode::LocalVisionLocal => translate_local_stream(text, target, cfg, on_chunk),
+        AppMode::LocalVisionLocal => translate_local_stream(text, target, &hits, cfg, on_chunk),
         AppMode::LocalVisionRemote => {
             if cfg.api_key.trim().is_empty() {
                 // 远程模式但未填 Key：回退模拟，避免界面空白。
@@ -171,7 +178,7 @@ pub fn translate_stream(
                 on_chunk(&t);
                 return t;
             }
-            match translate_via_curl(&cfg.endpoint, &cfg.api_key, &cfg.model, text, target) {
+            match translate_via_curl(&cfg.endpoint, &cfg.api_key, &cfg.model, text, target, &hits) {
                 Ok(t) if !t.trim().is_empty() => {
                     on_chunk(&t);
                     t
@@ -195,7 +202,12 @@ pub fn translate_stream(
 ///
 /// 这样"本地模型"对调用方而言等价于一个永远在 `127.0.0.1:port` 的"本地 API"，
 /// 无需额外网络依赖、无需 Key、不触发云端的 429/超时。
-fn translate_local(text: &str, target: Lang, cfg: &TranslatorConfig) -> String {
+fn translate_local(
+    text: &str,
+    target: Lang,
+    hits: &[(String, String)],
+    cfg: &TranslatorConfig,
+) -> String {
     if cfg.local_server.trim().is_empty() || cfg.local_model.trim().is_empty() {
         return "[本地模型] 请在设置里指定 llama-server.exe 与模型(.gguf)路径".to_string();
     }
@@ -212,10 +224,19 @@ fn translate_local(text: &str, target: Lang, cfg: &TranslatorConfig) -> String {
     // curl.exe 实时扫描、单次启动约 2s，180 次轮询把启动等待拖到 450s 而超时，
     // 表现为"服务端已加载却始终翻译不出"。改用 TcpStream 原生请求后探测为毫秒级。
     // 偶发 503（模型刚加载完 / 槽位暂忙）时重试，避免首句翻译直接失败。
+    //
+    // 输出质量校验（小模型两大常见毛病）：①复读原文（输出=输入）②预替换的中文术语
+    // 被改写/回译。命中任一情况即带着"加强指令"重试；重试用尽仍差则兜底返回最后一次结果。
     let mut last_err = String::new();
+    let mut best: Option<String> = None;
     for attempt in 0..3 {
-        match translate_local_http(cfg.local_port, &model, text, target) {
-            Ok(t) if !t.trim().is_empty() => return t,
+        match translate_local_http(cfg.local_port, &model, text, target, hits, attempt > 0) {
+            Ok(t) if !t.trim().is_empty() => {
+                if !translation_bad(text, &t, hits) {
+                    return t;
+                }
+                best = Some(t);
+            }
             Ok(_) => return mock_translate(text),
             Err(e) => {
                 last_err = e;
@@ -225,15 +246,25 @@ fn translate_local(text: &str, target: Lang, cfg: &TranslatorConfig) -> String {
             }
         }
     }
+    if let Some(t) = best {
+        return t;
+    }
     format!("[本地模型] {}", last_err)
 }
 
 /// 本地模型翻译（流式）：复用/拉起 llama.cpp 服务端，SSE 流式返回译文片段。
-/// 一旦已经产出过部分译文（on_chunk 被调用过），后续失败不再重试，
-/// 避免界面出现重复/拼接错乱的内容；只有"一个字节都没收到"的失败才重试。
+///
+/// 两阶段策略：
+///   1. **流式生成**：逐字回调上屏，首 token 数百毫秒即开始显示；
+///   2. **质量校验**：整句完成后检查"复读原文/术语被改写"。不合格则改走**非流式**
+///      加强重试（不再回调 `on_chunk`——UI 是整体替换式上屏，最终返回值会覆盖
+///      之前流式显示的坏译文，因此不会出现重复拼接；流式期间若再回调反而会拼出
+///      两次生成的内容）。
+/// 网络层失败的重试沿用旧逻辑：已经产出过部分译文就不再重试，避免界面错乱。
 fn translate_local_stream(
     text: &str,
     target: Lang,
+    hits: &[(String, String)],
     cfg: &TranslatorConfig,
     on_chunk: &mut dyn FnMut(&str),
 ) -> String {
@@ -254,9 +285,14 @@ fn translate_local_stream(
         emitted.set(true);
         on_chunk(chunk);
     };
+    let mut best: Option<String> = None;
+    // 第一阶段：流式生成。
     for attempt in 0..3 {
-        match translate_local_http_stream(cfg.local_port, &model, text, target, &mut cb) {
-            Ok(t) if !t.trim().is_empty() => return t,
+        match translate_local_http_stream(cfg.local_port, &model, text, target, hits, &mut cb) {
+            Ok(t) if !t.trim().is_empty() => {
+                best = Some(t);
+                break;
+            }
             Ok(_) => return mock_translate(text),
             Err(e) => {
                 last_err = e;
@@ -270,6 +306,32 @@ fn translate_local_stream(
             }
         }
     }
+    // 第二阶段：质量校验，不合格走非流式加强重试（不回调 on_chunk）。
+    if let Some(t) = &best {
+        if !translation_bad(text, t, hits) {
+            return t.clone();
+        }
+    }
+    for attempt in 0..2 {
+        match translate_local_http(cfg.local_port, &model, text, target, hits, true) {
+            Ok(t) if !t.trim().is_empty() => {
+                if !translation_bad(text, &t, hits) {
+                    return t;
+                }
+                best = Some(t);
+            }
+            Ok(_) => break,
+            Err(e) => {
+                last_err = e;
+                if attempt == 0 {
+                    thread::sleep(Duration::from_millis(800));
+                }
+            }
+        }
+    }
+    if let Some(t) = best {
+        return t;
+    }
     format!("[本地模型] {}", last_err)
 }
 
@@ -281,28 +343,20 @@ fn translate_local_http(
     model: &str,
     text: &str,
     target: Lang,
+    hits: &[(String, String)],
+    force: bool,
 ) -> Result<String, String> {
-    let prompt = format!(
-        "You are a game text translator. Translate the following text into {}. \
-         Output ONLY the translated text, with no explanations, no quotes, and no extra formatting.\n\n{}",
-        target.target_hint(),
-        text
-    );
+    let messages = build_messages(text, target, glossary::term_hint(hits).as_deref(), force);
     let body = json!({
         "model": model,
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": messages,
         "temperature": 0.3,
         "stream": false,
     });
     let body_str = serde_json::to_string(&body).map_err(|e| e.to_string())?;
     let resp = http_request("POST", port, "/v1/chat/completions", Some(&body_str), 25000)?;
-    let v: serde_json::Value = serde_json::from_str(&resp).map_err(|e| {
-        format!(
-            "解析接口响应失败: {} | 原始返回: {}",
-            e,
-            resp
-        )
-    })?;
+    let v: serde_json::Value = serde_json::from_str(&resp)
+        .map_err(|e| format!("解析接口响应失败: {} | 原始返回: {}", e, resp))?;
     let content = v["choices"][0]["message"]["content"]
         .as_str()
         .unwrap_or("")
@@ -319,17 +373,13 @@ fn translate_local_http_stream(
     model: &str,
     text: &str,
     target: Lang,
+    hits: &[(String, String)],
     on_chunk: &mut dyn FnMut(&str),
 ) -> Result<String, String> {
-    let prompt = format!(
-        "You are a game text translator. Translate the following text into {}. \
-         Output ONLY the translated text, with no explanations, no quotes, and no extra formatting.\n\n{}",
-        target.target_hint(),
-        text
-    );
+    let messages = build_messages(text, target, glossary::term_hint(hits).as_deref(), false);
     let body = json!({
         "model": model,
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": messages,
         "temperature": 0.3,
         "stream": true,
     });
@@ -361,7 +411,11 @@ fn http_request(
     let body_str = body.unwrap_or("");
     let req = format!(
         "{} {} HTTP/1.1\r\nHost: 127.0.0.1:{}\r\nContent-Type: application/json\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{}",
-        method, path, port, body_str.len(), body_str
+        method,
+        path,
+        port,
+        body_str.len(),
+        body_str
     );
     stream
         .write_all(req.as_bytes())
@@ -439,7 +493,10 @@ fn http_request_stream(
 
     let req = format!(
         "POST {} HTTP/1.1\r\nHost: 127.0.0.1:{}\r\nContent-Type: application/json\r\nAccept: text/event-stream\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{}",
-        path, port, body.len(), body
+        path,
+        port,
+        body.len(),
+        body
     );
     stream
         .write_all(req.as_bytes())
@@ -843,8 +900,7 @@ fn ensure_vl_server(cfg: &TranslatorConfig) -> Result<(), String> {
 
 /// 极简 base64 编码（RFC 4648），用于把截图塞进多模态请求的 data URI，避免额外依赖。
 fn base64_encode(data: &[u8]) -> String {
-    const TABLE: &[u8; 64] =
-        b"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    const TABLE: &[u8; 64] = b"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     let mut out = String::with_capacity((data.len() + 2) / 3 * 4);
     for chunk in data.chunks(3) {
         let b0 = chunk[0] as u32;
@@ -996,6 +1052,65 @@ fn mock_translate(text: &str) -> String {
     format!("[模拟译文] {}", text.trim())
 }
 
+/// 统一构造翻译消息（system + user 两角色）。
+/// 指令放 **system** 角色：Qwen2.5 等指令模型对 system 指令的遵循度显著高于
+/// "指令+正文挤在同一条 user 消息"的写法——后者正是"复读原文""改写已译术语"
+/// 两个症状的主要来源。术语保留提示（glossary 预替换后传入）也放 system。
+/// `force`：质量校验失败后的重试置 true，附加更强硬的指令。
+fn build_messages(
+    text: &str,
+    target: Lang,
+    term_hint: Option<&str>,
+    force: bool,
+) -> serde_json::Value {
+    let mut system = format!(
+        "You are a professional game text translator. Translate the user's text into {}. \
+         Output ONLY the translation — no explanations, no quotes, no markdown. \
+         The input text may already contain correctly translated Chinese proper nouns \
+         (game terms). Copy them into the output EXACTLY as written: never re-translate \
+         them, never transliterate them, never rephrase them.",
+        target.target_hint(),
+    );
+    if let Some(hint) = term_hint {
+        system.push('\n');
+        system.push_str(hint);
+    }
+    if force {
+        system.push_str(
+            "\nIMPORTANT: Your previous reply was rejected because it copied the input \
+             untranslated or altered the translated proper nouns. This time you MUST output \
+             a real, complete translation and keep every Chinese proper noun character-for-character.",
+        );
+    }
+    json!([
+        {"role": "system", "content": system},
+        {"role": "user", "content": text},
+    ])
+}
+
+/// 译文质量校验：返回 true 表示**不合格、需要重试**。
+/// 覆盖小模型（1.5B）的两类高发失败：
+///   1. **复读原文**：输出与输入归一化后一致（等于没翻译）。仅当输入确实含
+///      拉丁字母时判定，纯数字/符号文本翻译前后相同属正常。
+///   2. **术语丢失**：glossary 预替换进正文的中文术语没有出现在输出里
+///      （被模型改写/回译/丢弃）。比较前去掉全部空白，兼容"101 号道路"这类
+///      多打一个空格的无害差异。
+fn translation_bad(input: &str, output: &str, hits: &[(String, String)]) -> bool {
+    let norm = |s: &str| {
+        s.trim()
+            .to_lowercase()
+            .chars()
+            .filter(|c| !c.is_whitespace())
+            .collect::<String>()
+    };
+    let has_latin = input.chars().any(|c| c.is_ascii_alphabetic());
+    if has_latin && norm(input) == norm(output) {
+        return true;
+    }
+    let out = norm(output);
+    hits.iter().any(|(_, zh)| !out.contains(&norm(zh)))
+}
+
 /// 通过系统 curl.exe 调用 OpenAI 兼容的聊天补全接口。
 fn translate_via_curl(
     endpoint: &str,
@@ -1003,16 +1118,12 @@ fn translate_via_curl(
     model: &str,
     text: &str,
     target: Lang,
+    hits: &[(String, String)],
 ) -> Result<String, String> {
-    let prompt = format!(
-        "You are a game text translator. Translate the following text into {}. \
-         Output ONLY the translated text, with no explanations, no quotes, and no extra formatting.\n\n{}",
-        target.target_hint(),
-        text
-    );
+    let messages = build_messages(text, target, glossary::term_hint(hits).as_deref(), false);
     let body = json!({
         "model": model,
-        "messages": [{"role": "user", "content": prompt}],
+        "messages": messages,
         "temperature": 0.3,
         "stream": false,
     });
@@ -1060,7 +1171,10 @@ fn translate_via_curl(
         } else {
             format!("curl 退出码 {:?}", output.status.code())
         };
-        return Err(format!("HTTP 请求失败（端点/Key/模型可能不对）: {}", detail));
+        return Err(format!(
+            "HTTP 请求失败（端点/Key/模型可能不对）: {}",
+            detail
+        ));
     }
 
     let resp: serde_json::Value = serde_json::from_slice(&output.stdout).map_err(|e| {
@@ -1095,12 +1209,79 @@ fn normalize_chat_endpoint(endpoint: &str) -> Result<String, String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    // 端到端测试共享模型进程；串行使用，避免另一个测试回收正在推理的服务端。
+    static MODEL_TEST_LOCK: Mutex<()> = Mutex::new(());
     use crate::lang::Lang;
+
+    #[test]
+    fn quality_check_detects_echo() {
+        let hits = vec![("Route 101".into(), "101号道路".into())];
+        // 复读原文（输入含拉丁字母、输出=输入）→ 不合格。
+        // 注：真实链路里 input 是术语预替换后的文本，此处直接模拟之。
+        assert!(translation_bad(
+            "Go to 101号道路 now.",
+            "Go to 101号道路 now.",
+            &hits
+        ));
+        // 正常翻译（术语保留）→ 合格。
+        assert!(!translation_bad(
+            "Go to 101号道路 now.",
+            "现在前往101号道路。",
+            &hits
+        ));
+        // 纯数字/符号输入翻译前后相同 → 不算复读。
+        assert!(!translation_bad("123 456", "123 456", &[]));
+    }
+
+    #[test]
+    fn quality_check_detects_term_loss() {
+        let hits = vec![
+            ("Treecko".into(), "木守宫".into()),
+            ("Route 101".into(), "101号道路".into()),
+        ];
+        // 术语被改写（木守宫 → 草系宝可梦）→ 不合格。
+        assert!(translation_bad(
+            "木守宫 appeared on 101号道路!",
+            "草系宝可梦出现在101号道路上！",
+            &hits
+        ));
+        // 输出里术语带多余空格（101 号道路）→ 空白差异不影响判定，合格。
+        assert!(!translation_bad(
+            "木守宫 appeared on 101号道路!",
+            "木守宫出现在 101 号道路上！",
+            &hits
+        ));
+        // 输出与输入仅大小写/空白不同（即没翻译）→ 仍判复读，不合格。
+        assert!(translation_bad("Go to the shop", " go to the shop ", &[]));
+    }
+
+    #[test]
+    fn build_messages_roles() {
+        let hits = vec![("Treecko".into(), "木守宫".into())];
+        let msgs = build_messages(
+            "木守宫 uses Pound!",
+            Lang::Zh,
+            glossary::term_hint(&hits).as_deref(),
+            false,
+        );
+        let arr = msgs.as_array().unwrap();
+        assert_eq!(arr.len(), 2);
+        assert_eq!(arr[0]["role"], "system");
+        assert_eq!(arr[1]["role"], "user");
+        assert_eq!(arr[1]["content"], "木守宫 uses Pound!");
+        // 术语提示注入 system；force 模式追加加强指令。
+        let sys = arr[0]["content"].as_str().unwrap();
+        assert!(sys.contains("Treecko"));
+        let forced = build_messages("hi", Lang::Zh, None, true);
+        assert!(forced[0]["content"].as_str().unwrap().contains("IMPORTANT"));
+    }
 
     /// 自检测试：真正拉起本地 llama.cpp 服务端，跑一句翻译，验证端到端链路。
     /// 运行：cargo test selftest_local_translate -- --nocapture
     #[test]
     fn selftest_local_translate() {
+        let _guard = MODEL_TEST_LOCK.lock().unwrap();
         let mut cfg = TranslatorConfig::default();
         cfg.mode = AppMode::LocalVisionLocal;
         eprintln!(
@@ -1122,6 +1303,7 @@ mod tests {
     /// 运行：cargo test selftest_local_translate_stream -- --nocapture
     #[test]
     fn selftest_local_translate_stream() {
+        let _guard = MODEL_TEST_LOCK.lock().unwrap();
         let mut cfg = TranslatorConfig::default();
         cfg.mode = AppMode::LocalVisionLocal;
         let mut parts: Vec<String> = Vec::new();
@@ -1171,6 +1353,7 @@ mod tests {
     /// 无文字时模型回 NO_TEXT）。运行：cargo test selftest_vl_stream_ocr -- --nocapture
     #[test]
     fn selftest_vl_stream_ocr() {
+        let _guard = MODEL_TEST_LOCK.lock().unwrap();
         let mut cfg = TranslatorConfig::default();
         cfg.mode = AppMode::LocalVisionLocal;
         cfg.vl_max_side = 640; // 测试提速：小图预填充快
@@ -1181,6 +1364,8 @@ mod tests {
                 return;
             }
         };
+        // 正常监控会在后台预热并跳过冷启动帧；测试需等模型就绪后验证流式链路。
+        ensure_vl_server(&cfg).expect("视觉模型服务端预热失败");
         let mut chunks: Vec<String> = Vec::new();
         let t0 = Instant::now();
         let out = recognize_text_vl_stream(&img, &cfg, &mut |c| {

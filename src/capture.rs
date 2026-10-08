@@ -53,8 +53,7 @@ pub fn capture_primary() -> Result<(DynamicImage, f32, (i32, i32)), String> {
             Ok(i) => i,
             Err(_) => continue,
         };
-        let data: (DynamicImage, f32, (i32, i32)) =
-            (DynamicImage::ImageRgba8(img), scale, offset);
+        let data: (DynamicImage, f32, (i32, i32)) = (DynamicImage::ImageRgba8(img), scale, offset);
         if m.is_primary().map_err(|e| e.to_string())? {
             return Ok(data);
         }

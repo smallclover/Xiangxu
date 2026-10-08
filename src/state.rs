@@ -97,6 +97,10 @@ pub struct TranslateState {
     /// 避免全屏取景时用全屏位置算偏移导致面板乱跑。
     pub pick_panel_pos: Option<egui::Pos2>,
 
+    /// 挂起的全屏进入请求：先关闭区域边框浮层（避免被截屏截进背景图），
+    /// 下一帧再真正截屏进入对应模式。这是"点击按钮"与"截屏取景"之间的一帧缓冲。
+    pub pending_mode: Option<PendingFullscreenMode>,
+
     /// 区域调整模式（全屏拖拽移动/缩放已有区域）。
     pub adjusting: bool,
     /// 当前调整中的矩形（UI 坐标）。
@@ -127,6 +131,17 @@ pub enum AdjustHandle {
     Left,
 }
 
+/// 挂起的全屏进入模式。
+#[derive(Clone, Copy, PartialEq)]
+pub enum PendingFullscreenMode {
+    /// 框选区域。
+    Selection,
+    /// 调整已有区域。
+    Adjust,
+    /// 取窗吸附。
+    Pick,
+}
+
 impl Default for TranslateState {
     fn default() -> Self {
         Self {
@@ -154,6 +169,7 @@ impl Default for TranslateState {
             attach_picking: false,
             pick_hovered: None,
             pick_panel_pos: None,
+            pending_mode: None,
             adjusting: false,
             adjust_rect: None,
             adjust_drag: None,

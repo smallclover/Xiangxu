@@ -31,7 +31,7 @@ if (-not $OutDir) {
 Write-Host '=== 1/3 编译 release 版 ...' -ForegroundColor Cyan
 Push-Location $Root
 try {
-    cargo build --release
+    cargo build --release --locked
     if ($LASTEXITCODE -ne 0) {
         Write-Host '[X] cargo build 失败' -ForegroundColor Red
         exit 1
@@ -48,7 +48,12 @@ if (-not (Test-Path $Exe)) {
 
 Write-Host '=== 2/3 组装发布目录 ...' -ForegroundColor Cyan
 $Stage = Join-Path $OutDir 'Xiangxu'
-if (Test-Path $Stage) { Remove-Item $Stage -Recurse -Force }
+$OutDir = [System.IO.Path]::GetFullPath($OutDir)
+$Stage = [System.IO.Path]::GetFullPath($Stage)
+if (-not $Stage.StartsWith($OutDir.TrimEnd('\') + '\', [System.StringComparison]::OrdinalIgnoreCase)) {
+    throw '发布目录必须位于指定输出目录内。'
+}
+if (Test-Path -LiteralPath $Stage) { Remove-Item -LiteralPath $Stage -Recurse -Force }
 New-Item -ItemType Directory -Force -Path $Stage | Out-Null
 
 Copy-Item $Exe $Stage
@@ -59,8 +64,22 @@ if (Test-Path (Join-Path $Root 'llama-cuda')) {
     Copy-Item (Join-Path $Root 'llama-cuda') $Stage -Recurse
     Write-Host '  [OK] llama-cuda\ (含 CUDA 13.3 运行时 DLL)'
 } else {
-    Write-Host '  [SKIP] llama-cuda\ 不存在（需先准备 CUDA 版 llama.cpp 并运行 download_cuda_runtime.ps1）' -ForegroundColor Yellow
+    throw 'llama-cuda\ 不存在，无法生成完整发布包。'
 }
+
+foreach ($RuntimeFile in @('llama-server.exe', 'llama-server-impl.dll', 'llama.dll', 'ggml.dll', 'ggml-base.dll', 'ggml-cuda.dll', 'mtmd.dll', 'cudart64_13.dll', 'cublas64_13.dll', 'cublasLt64_13.dll')) {
+    if (-not (Test-Path -LiteralPath (Join-Path $Stage "llama-cuda\$RuntimeFile"))) {
+        throw "发布包缺少运行时文件：$RuntimeFile"
+    }
+}
+
+# 术语表从 exe 同目录读取，便携包必须携带。
+New-Item -ItemType Directory -Force -Path (Join-Path $Stage 'assets') | Out-Null
+Copy-Item -LiteralPath (Join-Path $Root 'assets\glossary') -Destination (Join-Path $Stage 'assets') -Recurse
+Copy-Item -LiteralPath (Join-Path $Root 'LICENSE') -Destination $Stage
+Copy-Item -LiteralPath (Join-Path $Root 'CHANGELOG.md') -Destination $Stage
+Copy-Item -LiteralPath (Join-Path $Root 'download_models.ps1') -Destination $Stage
+Write-Host '  [OK] assets\glossary\、LICENSE、download_models.ps1'
 
 # CUDA 运行时补装脚本（用户换机器 / 重装系统时用）
 Copy-Item (Join-Path $Root 'download_cuda_runtime.ps1') $Stage
@@ -74,7 +93,7 @@ if (Test-Path (Join-Path $Root 'README.md')) {
 
 Write-Host '=== 3/3 打包 zip ...' -ForegroundColor Cyan
 $Zip = Join-Path $OutDir 'Xiangxu-release.zip'
-if (Test-Path $Zip) { Remove-Item $Zip -Force }
+if (Test-Path -LiteralPath $Zip) { Remove-Item -LiteralPath $Zip -Force }
 # llama-cuda 目录约 660MB，压缩耗时较长属正常
 Compress-Archive -Path $Stage -DestinationPath $Zip -CompressionLevel Optimal
 

@@ -1,0 +1,5 @@
+﻿# 用户自定义术语（英文\t中文，每行一条，# 开头为注释）。
+# 优先级最高：同名英文会覆盖 pokemon/moves/abilities/items/locations 中的译名。
+# 修改保存后重启应用生效。示例：
+# Wally	小遥
+# Poké Ball	精灵球

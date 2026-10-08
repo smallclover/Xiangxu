@@ -12,12 +12,12 @@
 //!   - 相似文本去重 + 翻译缓存，重复句子不重复调用。
 //!   - 只在"句子停顿"或"出现句末标点"时才真正投递翻译任务，从源头压住请求量。
 
-use crate::capture::{capture_region, ScreenRect};
+use crate::capture;
+use crate::capture::{ScreenRect, capture_region};
 use crate::lang::Lang;
 use crate::ocr::recognize_text_stream;
 use crate::state::{MonitorConfig, TranslateResult};
 use crate::translate;
-use crate::capture;
 use egui::Context;
 use std::collections::HashMap;
 use std::sync::mpsc::Sender;
@@ -68,7 +68,12 @@ pub fn spawn_monitor(config: Arc<Mutex<MonitorConfig>>, ctx: Context, tx: Sender
     let cfg_for_worker = Arc::clone(&config);
     let ctx_for_worker = ctx.clone();
     let tx_for_worker = tx.clone();
-    spawn_translation_worker(pending.clone(), tx_for_worker, cfg_for_worker, ctx_for_worker);
+    spawn_translation_worker(
+        pending.clone(),
+        tx_for_worker,
+        cfg_for_worker,
+        ctx_for_worker,
+    );
 
     thread::spawn(move || {
         // 空闲/高频模式切换：未检测到文字时进入空闲低频轮询，省 CPU。
@@ -91,7 +96,11 @@ pub fn spawn_monitor(config: Arc<Mutex<MonitorConfig>>, ctx: Context, tx: Sender
 
         loop {
             // 空闲时降低轮询频率（少做无谓的截屏+OCR）；有文字时恢复每帧高频。
-            let interval = if idle { IDLE_INTERVAL_MS } else { ACTIVE_INTERVAL_MS };
+            let interval = if idle {
+                IDLE_INTERVAL_MS
+            } else {
+                ACTIVE_INTERVAL_MS
+            };
             thread::sleep(Duration::from_millis(interval));
 
             let (running, region, tgt, translator, attach_hwnd, attach_off) = {
@@ -214,9 +223,8 @@ pub fn spawn_monitor(config: Arc<Mutex<MonitorConfig>>, ctx: Context, tx: Sender
                     let trimmed = acc.trim();
                     // NO_TEXT 前缀暂存：空场景模型会输出 "NO_TEXT"，
                     // 不能把它逐字刷上原文框（等转录完成后统一判定为空）。
-                    let no_text_prefix = !trimmed.is_empty()
-                        && trimmed.len() <= 7
-                        && "NO_TEXT".starts_with(trimmed);
+                    let no_text_prefix =
+                        !trimmed.is_empty() && trimmed.len() <= 7 && "NO_TEXT".starts_with(trimmed);
                     if no_text_prefix || acc == last_sent {
                         return;
                     }
@@ -405,24 +413,19 @@ fn spawn_translation_worker(
             } else {
                 let t0 = Instant::now();
                 let mut acc = String::new();
-                let t = translate::translate_stream(
-                    &job.source,
-                    job.target,
-                    &cfg,
-                    &mut |chunk| {
-                        acc.push_str(chunk);
-                        // 流式中间结果：立即上屏（译文框逐字刷新），不进历史。
-                        let _ = tx_ui.send(TranslateResult {
-                            source: job.source.clone(),
-                            target: acc.clone(),
-                            live: false,
-                            streaming: true,
-                            source_streaming: false,
-                            clear: false,
-                        });
-                        ctx.request_repaint();
-                    },
-                );
+                let t = translate::translate_stream(&job.source, job.target, &cfg, &mut |chunk| {
+                    acc.push_str(chunk);
+                    // 流式中间结果：立即上屏（译文框逐字刷新），不进历史。
+                    let _ = tx_ui.send(TranslateResult {
+                        source: job.source.clone(),
+                        target: acc.clone(),
+                        live: false,
+                        streaming: true,
+                        source_streaming: false,
+                        clear: false,
+                    });
+                    ctx.request_repaint();
+                });
                 tracing::info!(
                     elapsed_ms = t0.elapsed().as_millis() as u64,
                     "翻译完成 ({} bytes)",
@@ -454,7 +457,10 @@ fn spawn_translation_worker(
 
 /// 归一化：转小写并去掉所有空白，用于忽略大小写/排版导致的无关差异。
 fn normalize(s: &str) -> String {
-    s.to_lowercase().chars().filter(|c| !c.is_whitespace()).collect()
+    s.to_lowercase()
+        .chars()
+        .filter(|c| !c.is_whitespace())
+        .collect()
 }
 
 /// 计算两串字符的编辑距离（Levenshtein），用于衡量文本相似度。

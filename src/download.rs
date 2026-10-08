@@ -201,11 +201,7 @@ fn run_download(prog: Arc<Mutex<DownloadProgress>>) {
 }
 
 /// 下载单个文件，边读边更新进度。
-fn download_file(
-    url: &str,
-    out: &Path,
-    prog: &Arc<Mutex<DownloadProgress>>,
-) -> Result<(), String> {
+fn download_file(url: &str, out: &Path, prog: &Arc<Mutex<DownloadProgress>>) -> Result<(), String> {
     let resp = ureq::get(url)
         .header("User-Agent", "Xiangxu/0.1")
         .call()
